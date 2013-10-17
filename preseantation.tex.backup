@@ -1,0 +1,237 @@
+\documentclass[]{beamer}
+% Class options include: notes, notesonly, handout, trans,
+%                        hidesubsections, shadesubsections,
+%                        inrow, blue, red, grey, brown
+
+% Theme for beamer presentation.
+\usepackage{beamerthemesplit} 
+\usepackage{amssymb}
+\usepackage{theorem}
+\usepackage{graphicx} % Include figure files
+\usepackage{epstopdf}
+\usepackage{amsmath} % Include the ast symbol
+\usepackage{comment}  % Include the comment function
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+% Other themes include: beamerthemebars, beamerthemelined, 
+%                       beamerthemetree, beamerthemetreebars  
+\title{Effective mass from semiconductor}    % Enter your title between curly braces
+\author{Rongzhen Chen}                 % Enter your name between curly braces
+\institute{Royal Institute of Technology}      % Enter your institute name between curly braces
+\date{January 14, 2013}                    % Enter the date or \today between curly braces
+
+\begin{document}
+\def\hath{\hat{H}}
+\def\wf {\Psi(\{\bf{R}_\textit{I}, \bf{r}_\textit{i} \})}
+\def\wfbo{\Psi_{\textit{bo}}({\textbf{r}_{\textit{i}}})}
+\def\wfh{\Psi_{\textit{h}}({\textbf{r}_{\textit{i}}})}
+\def\wfhit<#1>{\Psi_{\textit{h}}^{#1}({\textbf{r}_{\textit{i}}})}
+\def\bwf<#1><#2>{\phi_{#1}(\textbf{r}_{#2})}
+\def\wfbloch<#1><#2>{\Psi_{#1,#2}(\textbf{r})}
+\def\ubloch<#1><#2>{u_{#1,#2}(\textbf{r})}
+\def\ebloch<#1><#2>{E_{#1,#2}}
+\def\bwfc<#1><#2><#3>{\phi_{#1}^{#3}(\textbf{r}_{#2})}
+\def\sumi<#1> {\sum\limits_\textit{#1}}
+\def\sumij<#1><#2> {\sum\limits_\textit{#1,#2}}
+\def\suminj<#1><#2> {\sum\limits_{\textit{#1} \neq \textit{#2}}}
+\def\coefkhe{-\frac{\hbar^2}{2 m_\textit{e}}}
+\def\coefkhn{-\frac{\hbar^2}{2 M_\textit{I}}}
+\def\nablai2<#1> {{\nabla}_{\textit{#1}}^{2}}
+\def\moperater{-i\hbar \nabla}
+\def\sumg<#1>{{\sum\limits_{\bf{#1}}}}    
+\def\sumlm<#1><#2>{\sum\limits_{{#1}{#2}}}
+\def\coeff<#1><#2><#3>{C_{#1,\bf{k_0}+\bf{#2}}^{#3}}      %C_{j,k_0+G}^{*}
+\def\expkg<#1><#2>{e^{i(\bf{#1}+\bf{#2})\bf{r}}}          %exp{i(k+G)r}
+\def\expg<#1>{e^{i\bf{#1}\bf{r}}}                         %exp{iGr}
+%\def\bwf<#1>{\phi_{\bf{k_0}+\bf{#1}}^{\textbf{APW}}(\textbf{r})}          %phi_{k_0+G}  
+\def\chig<#1>{{\chi_{\bf{kk_0}}(\bf{#1})}}                  %chi_{kk_0}{G}
+%\def\hath{ | \hat{H} | }           
+\def\kplusg<#1><#2>{(\bf{#1}+\bf{#2})}                    % k+G 
+\def\radiaf<#1><#2>{f_{{\ell}^{\prime}{m}^{\prime}} (r_{\alpha},\bf{#1+#2})}    % f(r,k+G)
+\def\radiafc<#1><#2><#3>{f_{{\ell}^{\prime}{m}^{\prime}}^{#3} (r_{\alpha},\bf{#1+#2})}    % f(r,k+G)
+\def\bradiaf{u^{\alpha}_{q,\ell^{\prime}}(r_{\alpha},E_{\ell^{\prime}})}              %u(r_\alpha) did not contain the Energy
+\def\sphfr<#1><#2><#3> {{Y_{#1}^{#3}(\hat{\bf{#2}}_{\alpha})}}                             %Y_{lm}(\hat{r})
+\def\sphfq<#1><#2><#3> {{Y_{#1}^{#3}(\hat{\bf{#2}})}}                             %Y_{lm}(\hat{q})
+\def\gaucoe{C_{{\ell{m}},{\ell^{\prime}m^{\prime}},{\ell^{\prime\prime}m^{\prime\prime}}}}  %Gaunt coefficient
+\def\potvgir{V_{\bf{G^{\prime\prime}}}}                                %V{G}
+\def\potvmt{V^{\alpha}_{{\ell}^{\prime\prime}{m}^{\prime\prime}} (r_{\alpha})}  %V{lm,r}   
+\def\fracatom<#1> {e^{i\bf{#1}\bf{R^\alpha}}}   % exp(iqR)
+\def\bessf<#1>{j_{\ell}({#1}r_{\alpha})}     %j_l(kr)
+\def\dr{\mathrm{d}\bf{r}}
+\def\chikp<#1><#2>{{\chi_{#1,#2}(\textbf{r})}}  
+
+
+
+
+% Creates title page of slide show using above information
+\begin{frame}
+  \titlepage
+\end{frame}
+\note{Talk for 30 minutes} % Add notes to yourself that will be displayed when
+                           % typeset with the notes or notesonly class options
+
+\section[Outline]{}
+
+\begin{frame}
+
+ \tableofcontents
+
+
+\end{frame}
+
+
+\section{Background}
+\begin{frame}
+
+In solid state physcis, the effective mass is defined as follows:
+
+\begin{equation}
+ \frac{1}{m^*_{\alpha\beta}} = \frac{1}{\hbar^2} \frac{d^2 E(\textbf{k} )}{dk_\alpha dk_\beta}
+\end{equation}
+
+where $m^*$ is effective mass, and $E(k)$ is the band dispersion relation betwwen energy $E$ and $k$.
+The effective mass reflects the band curvature, the flatter of band, the larger effective mass.
+
+Normally, one can obtain the effective mass by fitting the energy band dispersion around the conduction band minimum or the valence band maximum.
+\begin{equation}
+ E = \frac{1}{m^*_{\alpha\beta}} = \frac{1}{\hbar^2} \frac{d^2 E(\textbf{k} )}{dk_\alpha dk_\beta}
+\end{equation}
+
+%\includegraphics[width=90mm]{KS.pdf}
+
+\tikzstyle{decision} = [diamond, draw, fill=blue!20,
+    text width=6em, text badly centered, node distance=2.5cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=blue!20,
+    text width=7em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, very thick, color=black!50, -latex']
+
+\begin{figure}
+
+
+
+\begin{tikzpicture}[scale=0.38 , node distance = 2.5cm,transform shape]
+    % Place nodes
+    \node [block] (init) {Initialize density $\rho^{in}$};
+    \node [block, below of=init] (potential) {Calculate potential $V( {\bf r})$};
+    \node [block, below of=potential, node distance=2.5cm] (KS) {Solve KS equation on each k-point};
+    \node [block, below of=KS, node distance=2.5cm] (fermi) {Decide fermi energy $E_F$};
+    \node [block, below of=fermi, node distance=2.5cm] (density) {Calculate new density $\rho^{new}$};
+    \node [block, left of=fermi, node distance=4cm] (update) {Decide the mix density $\rho_{mix}$};
+    \node [decision, below of=density, node distance=2.5cm] (converge) {Converged?};
+    \node [block, below of=converge, node distance=2.5cm] (done) {Finished};
+    % Draw edges
+    \path [line] (init) -- (potential);
+    \path [line] (potential) -- (KS);
+    \path [line] (KS) -- (fermi);
+    \path [line] (fermi) -- (density);
+    \path [line] (density) -- (converge);
+    \path [line] (converge) -| node [near start, color=black] {No} (update);
+    \path [line] (update) |- (potential);
+    \path [line] (converge) -- node [, color=black] {Yes}(done);
+
+\end{tikzpicture}
+
+\caption{Ground state flow chart}
+\end{figure}
+\end{frame}
+
+
+\section{K dot P derivation} 
+\begin{frame}
+
+The basic idea will be explained in the following text. First, from Bloch Theory we know 
+
+\begin{equation}\label{1}
+ \wfbloch<n><k> = \expg<k> \ubloch<n><k>
+\end{equation}
+
+where $\wfbloch<n><k>$ is the wave function on k point for the {\it n}th band, and $\expg<k>$ is plane wave, $\ubloch<n><k>$ is a function which has the same a periodicity as the potential.
+
+\end{frame}
+
+
+\begin{frame}
+Now let us suppose we already got the wavefunction and energy by some procedure on $k_0$ point, $\wfbloch<n><k_0>$ is the wavefunction and $\ebloch<n><k_0>$ is the energy.
+We define another function as the following:
+
+\begin{equation}\label{2}
+\chikp<n><k> = \expg<(k-k_0)> \wfbloch<n><k_0>
+\end{equation}
+\end{frame}
+
+
+
+\begin{frame}
+ we can expand the above function $\chikp<n><k> $ as wave function on $k$ point, and then we can calculate the wave function on the $k$ point.
+\begin{equation}\label{3}
+\wfbloch<n><k> =  {\sum\limits_{\color{red} j}} C_{n,j}^{k} \chikp<n><k> 
+\end{equation}
+
+
+
+From above equation, we will know the wave function if we get the coefficient $C_{n,j}^{k}$, let us substitute the equation \ref{3} into Kohn-Sham equation.
+\begin{equation}\label{4}
+\left\{ \frac {{\bf p}^2} {2m} + V({\bf r}) \right\} \wfbloch<n><k> = \ebloch<n><k> \wfbloch<n><k>
+\end{equation} 
+
+\end{frame}
+
+
+
+\begin{frame}
+then we will finally get the following equation.
+\begin{equation}\label{5}
+{\sum\limits_{j}}  C_{n,j}^{k} \left \{  \left [  \ebloch<j><k_0> -  \ebloch<n><k>  + \frac{{\hbar}^2}{2m} {\bf (k^2-k_0^2)}    \right ] \delta_{j',j} + \frac{\hbar}{m} {\bf(k-k_0)} {\bf p_{j',j}} \right \} = 0
+\end{equation}
+
+where ${\bf p_{j',j}} = \langle \ubloch<j'><k_0>| {\bf p} | \ubloch<j><k_0>  \rangle $.
+ 
+We also can simpify the above equation in the following format:
+\begin{equation}\label{6}
+{\sum\limits_{j}} C_{n,j}^{k} \left \{ H_{j',j}- \ebloch<n><k> \delta_{j',j} \right \} =0
+\end{equation}
+
+where $H_{j',j} = \left [  \ebloch<j><k_0>  + \frac{{\hbar}^2}{2m} {\bf (k^2-k_0^2)}    \right ] \delta_{j',j} + \frac{\hbar}{m} {\bf(k-k_0)} {\bf p_{j',j}}$, from the above equation, we 
+can calculate the coefficient $ C_{n,j}^{k}$.
+
+\end{frame}
+
+
+
+\section{Sum Up}
+\begin{frame}
+
+K dot P method is one method which takes use of the wave function from certain $k_0$ point, and then approximating the wave function from $k$ point, 
+so it is quite useful if we can figure out a way to use, which will reduce the calculation time. 
+
+\end{frame}
+
+
+\section{Discussion panel}
+\begin{frame}
+\begin{itemize} 
+\item[\checkmark] Maybe it is useful for some parts of the calculation during GW, BSE or something else?
+\vspace{+2em}
+\item[\checkmark] From the derivation, we can see the number of wave function on $k_0$ is infinite, but in reality, we have to cut off somehow,
+ so question arising when choose small number of bands (check the figure), we need to figure out a way to correct it. 
+\end{itemize} 
+\end{frame}
+
+
+\begin{frame}
+\begin{figure}
+\includegraphics[width=80mm]{figure1.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{figure}
+\includegraphics[width=80mm]{figure2.png}
+\end{figure}
+\end{frame}
+
+
+
+\end{document}
