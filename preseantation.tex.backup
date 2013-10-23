@@ -2,7 +2,17 @@
 % Class options include: notes, notesonly, handout, trans,
 %                        hidesubsections, shadesubsections,
 %                        inrow, blue, red, grey, brown
-
+%\usepackage{caption}
+\setbeamertemplate{caption}[numbered] 
+\usepackage[absolute,overlay]{textpos}
+\setlength{\TPHorizModule}{1mm} \setlength{\TPVertModule}{1mm}
+\newcommand{\MyLogo}{%
+\begin{textblock}{14}(115.9,0.1)
+  \includegraphics[width=1.22cm]{kth_rgb}
+ \end{textblock}
+}
+\renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
+\usepackage{sidecap}
 % Theme for beamer presentation.
 \usepackage{beamerthemesplit} 
 \usepackage{amssymb}
@@ -17,57 +27,24 @@
 \usetikzlibrary{shapes,arrows}
 % Other themes include: beamerthemebars, beamerthemelined, 
 %                       beamerthemetree, beamerthemetreebars  
-\title{Effective mass from semiconductor}    % Enter your title between curly braces
-\author{Rongzhen Chen}                 % Enter your name between curly braces
-\institute{Royal Institute of Technology}      % Enter your institute name between curly braces
-\date{January 14, 2013}                    % Enter the date or \today between curly braces
+\title{Parameterization of Energy Bands and Optical Properties in Semiconductor $CuIn_{1-x}Ga_{x}Se_2$}    % Enter your title between curly braces
+\author{Rongzhen Chen}                % Enter your name between curly braces
+\institute{{ {Multiscale Materials Modeling}}\\
+           Department of Materials Science and Engineering \\
+           {Royal Institute of Technology}}      % Enter your institute name between curly braces
+\date{October 23, 2013}                    % Enter the date or \today between curly braces
+
 
 \begin{document}
-\def\hath{\hat{H}}
-\def\wf {\Psi(\{\bf{R}_\textit{I}, \bf{r}_\textit{i} \})}
-\def\wfbo{\Psi_{\textit{bo}}({\textbf{r}_{\textit{i}}})}
-\def\wfh{\Psi_{\textit{h}}({\textbf{r}_{\textit{i}}})}
-\def\wfhit<#1>{\Psi_{\textit{h}}^{#1}({\textbf{r}_{\textit{i}}})}
-\def\bwf<#1><#2>{\phi_{#1}(\textbf{r}_{#2})}
-\def\wfbloch<#1><#2>{\Psi_{#1,#2}(\textbf{r})}
-\def\ubloch<#1><#2>{u_{#1,#2}(\textbf{r})}
-\def\ebloch<#1><#2>{E_{#1,#2}}
-\def\bwfc<#1><#2><#3>{\phi_{#1}^{#3}(\textbf{r}_{#2})}
-\def\sumi<#1> {\sum\limits_\textit{#1}}
-\def\sumij<#1><#2> {\sum\limits_\textit{#1,#2}}
-\def\suminj<#1><#2> {\sum\limits_{\textit{#1} \neq \textit{#2}}}
-\def\coefkhe{-\frac{\hbar^2}{2 m_\textit{e}}}
-\def\coefkhn{-\frac{\hbar^2}{2 M_\textit{I}}}
-\def\nablai2<#1> {{\nabla}_{\textit{#1}}^{2}}
-\def\moperater{-i\hbar \nabla}
-\def\sumg<#1>{{\sum\limits_{\bf{#1}}}}    
-\def\sumlm<#1><#2>{\sum\limits_{{#1}{#2}}}
-\def\coeff<#1><#2><#3>{C_{#1,\bf{k_0}+\bf{#2}}^{#3}}      %C_{j,k_0+G}^{*}
-\def\expkg<#1><#2>{e^{i(\bf{#1}+\bf{#2})\bf{r}}}          %exp{i(k+G)r}
-\def\expg<#1>{e^{i\bf{#1}\bf{r}}}                         %exp{iGr}
-%\def\bwf<#1>{\phi_{\bf{k_0}+\bf{#1}}^{\textbf{APW}}(\textbf{r})}          %phi_{k_0+G}  
-\def\chig<#1>{{\chi_{\bf{kk_0}}(\bf{#1})}}                  %chi_{kk_0}{G}
-%\def\hath{ | \hat{H} | }           
-\def\kplusg<#1><#2>{(\bf{#1}+\bf{#2})}                    % k+G 
-\def\radiaf<#1><#2>{f_{{\ell}^{\prime}{m}^{\prime}} (r_{\alpha},\bf{#1+#2})}    % f(r,k+G)
-\def\radiafc<#1><#2><#3>{f_{{\ell}^{\prime}{m}^{\prime}}^{#3} (r_{\alpha},\bf{#1+#2})}    % f(r,k+G)
-\def\bradiaf{u^{\alpha}_{q,\ell^{\prime}}(r_{\alpha},E_{\ell^{\prime}})}              %u(r_\alpha) did not contain the Energy
-\def\sphfr<#1><#2><#3> {{Y_{#1}^{#3}(\hat{\bf{#2}}_{\alpha})}}                             %Y_{lm}(\hat{r})
-\def\sphfq<#1><#2><#3> {{Y_{#1}^{#3}(\hat{\bf{#2}})}}                             %Y_{lm}(\hat{q})
-\def\gaucoe{C_{{\ell{m}},{\ell^{\prime}m^{\prime}},{\ell^{\prime\prime}m^{\prime\prime}}}}  %Gaunt coefficient
-\def\potvgir{V_{\bf{G^{\prime\prime}}}}                                %V{G}
-\def\potvmt{V^{\alpha}_{{\ell}^{\prime\prime}{m}^{\prime\prime}} (r_{\alpha})}  %V{lm,r}   
-\def\fracatom<#1> {e^{i\bf{#1}\bf{R^\alpha}}}   % exp(iqR)
-\def\bessf<#1>{j_{\ell}({#1}r_{\alpha})}     %j_l(kr)
-\def\dr{\mathrm{d}\bf{r}}
-\def\chikp<#1><#2>{{\chi_{#1,#2}(\textbf{r})}}  
 
+\MyLogo
 
 
 
 % Creates title page of slide show using above information
 \begin{frame}
   \titlepage
+\MyLogo
 \end{frame}
 \note{Talk for 30 minutes} % Add notes to yourself that will be displayed when
                            % typeset with the notes or notesonly class options
@@ -78,158 +55,263 @@
 
  \tableofcontents
 
-
+\MyLogo
 \end{frame}
 
 
-\section{Background}
+\section{Motivation}
 \begin{frame}
-
-In solid state physcis, the effective mass is defined as follows:
-
-\begin{equation}
- \frac{1}{m^*_{\alpha\beta}} = \frac{1}{\hbar^2} \frac{d^2 E(\textbf{k} )}{dk_\alpha dk_\beta}
-\end{equation}
-
-where $m^*$ is effective mass, and $E(k)$ is the band dispersion relation betwwen energy $E$ and $k$.
-The effective mass reflects the band curvature, the flatter of band, the larger effective mass.
-
-Normally, one can obtain the effective mass by fitting the energy band dispersion around the conduction band minimum or the valence band maximum.
-\begin{equation}
- E = \frac{1}{m^*_{\alpha\beta}} = \frac{1}{\hbar^2} \frac{d^2 E(\textbf{k} )}{dk_\alpha dk_\beta}
-\end{equation}
-
-%\includegraphics[width=90mm]{KS.pdf}
-
-\tikzstyle{decision} = [diamond, draw, fill=blue!20,
-    text width=6em, text badly centered, node distance=2.5cm, inner sep=0pt]
-\tikzstyle{block} = [rectangle, draw, fill=blue!20,
-    text width=7em, text centered, rounded corners, minimum height=4em]
-\tikzstyle{line} = [draw, very thick, color=black!50, -latex']
-
-\begin{figure}
-
-
-
-\begin{tikzpicture}[scale=0.38 , node distance = 2.5cm,transform shape]
-    % Place nodes
-    \node [block] (init) {Initialize density $\rho^{in}$};
-    \node [block, below of=init] (potential) {Calculate potential $V( {\bf r})$};
-    \node [block, below of=potential, node distance=2.5cm] (KS) {Solve KS equation on each k-point};
-    \node [block, below of=KS, node distance=2.5cm] (fermi) {Decide fermi energy $E_F$};
-    \node [block, below of=fermi, node distance=2.5cm] (density) {Calculate new density $\rho^{new}$};
-    \node [block, left of=fermi, node distance=4cm] (update) {Decide the mix density $\rho_{mix}$};
-    \node [decision, below of=density, node distance=2.5cm] (converge) {Converged?};
-    \node [block, below of=converge, node distance=2.5cm] (done) {Finished};
-    % Draw edges
-    \path [line] (init) -- (potential);
-    \path [line] (potential) -- (KS);
-    \path [line] (KS) -- (fermi);
-    \path [line] (fermi) -- (density);
-    \path [line] (density) -- (converge);
-    \path [line] (converge) -| node [near start, color=black] {No} (update);
-    \path [line] (update) |- (potential);
-    \path [line] (converge) -- node [, color=black] {Yes}(done);
-
-\end{tikzpicture}
-
-\caption{Ground state flow chart}
-\end{figure}
-\end{frame}
-
-
-\section{K dot P derivation} 
-\begin{frame}
-
-The basic idea will be explained in the following text. First, from Bloch Theory we know 
-
-\begin{equation}\label{1}
- \wfbloch<n><k> = \expg<k> \ubloch<n><k>
-\end{equation}
-
-where $\wfbloch<n><k>$ is the wave function on k point for the {\it n}th band, and $\expg<k>$ is plane wave, $\ubloch<n><k>$ is a function which has the same a periodicity as the potential.
-
-\end{frame}
-
-
-\begin{frame}
-Now let us suppose we already got the wavefunction and energy by some procedure on $k_0$ point, $\wfbloch<n><k_0>$ is the wavefunction and $\ebloch<n><k_0>$ is the energy.
-We define another function as the following:
-
-\begin{equation}\label{2}
-\chikp<n><k> = \expg<(k-k_0)> \wfbloch<n><k_0>
-\end{equation}
-\end{frame}
-
-
-
-\begin{frame}
- we can expand the above function $\chikp<n><k> $ as wave function on $k$ point, and then we can calculate the wave function on the $k$ point.
-\begin{equation}\label{3}
-\wfbloch<n><k> =  {\sum\limits_{\color{red} j}} C_{n,j}^{k} \chikp<n><k> 
-\end{equation}
-
-
-
-From above equation, we will know the wave function if we get the coefficient $C_{n,j}^{k}$, let us substitute the equation \ref{3} into Kohn-Sham equation.
-\begin{equation}\label{4}
-\left\{ \frac {{\bf p}^2} {2m} + V({\bf r}) \right\} \wfbloch<n><k> = \ebloch<n><k> \wfbloch<n><k>
-\end{equation} 
-
-\end{frame}
-
-
-
-\begin{frame}
-then we will finally get the following equation.
-\begin{equation}\label{5}
-{\sum\limits_{j}}  C_{n,j}^{k} \left \{  \left [  \ebloch<j><k_0> -  \ebloch<n><k>  + \frac{{\hbar}^2}{2m} {\bf (k^2-k_0^2)}    \right ] \delta_{j',j} + \frac{\hbar}{m} {\bf(k-k_0)} {\bf p_{j',j}} \right \} = 0
-\end{equation}
-
-where ${\bf p_{j',j}} = \langle \ubloch<j'><k_0>| {\bf p} | \ubloch<j><k_0>  \rangle $.
- 
-We also can simpify the above equation in the following format:
-\begin{equation}\label{6}
-{\sum\limits_{j}} C_{n,j}^{k} \left \{ H_{j',j}- \ebloch<n><k> \delta_{j',j} \right \} =0
-\end{equation}
-
-where $H_{j',j} = \left [  \ebloch<j><k_0>  + \frac{{\hbar}^2}{2m} {\bf (k^2-k_0^2)}    \right ] \delta_{j',j} + \frac{\hbar}{m} {\bf(k-k_0)} {\bf p_{j',j}}$, from the above equation, we 
-can calculate the coefficient $ C_{n,j}^{k}$.
-
-\end{frame}
-
-
-
-\section{Sum Up}
-\begin{frame}
-
-K dot P method is one method which takes use of the wave function from certain $k_0$ point, and then approximating the wave function from $k$ point, 
-so it is quite useful if we can figure out a way to use, which will reduce the calculation time. 
-
-\end{frame}
-
-
-\section{Discussion panel}
-\begin{frame}
-\begin{itemize} 
-\item[\checkmark] Maybe it is useful for some parts of the calculation during GW, BSE or something else?
-\vspace{+2em}
-\item[\checkmark] From the derivation, we can see the number of wave function on $k_0$ is infinite, but in reality, we have to cut off somehow,
- so question arising when choose small number of bands (check the figure), we need to figure out a way to correct it. 
-\end{itemize} 
-\end{frame}
-
-
-\begin{frame}
-\begin{figure}
-\includegraphics[width=80mm]{figure1.png}
+\MyLogo
+According to the statistical review of world energy on 2012. 
+\begin{figure}[H]
+     \begin{center}
+            \includegraphics[width=0.8\textwidth]{world_Consumption.pdf}
+     \end{center}
+    \caption{ Figure is from BP statistical review of world energy 2012, METO means million tonnes oil equivalent. }
 \end{figure}
 \end{frame}
 
 \begin{frame}
-\begin{figure}
-\includegraphics[width=80mm]{figure2.png}
+\MyLogo
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{efficiency_chart.jpg}
+\caption{Best research-cell efficiencies. Figure is from National Renewable Energy Laboratory (NREL), Golden, Colorado.}
+\label{nrel}
 \end{figure}
+\end{frame}
+
+\begin{frame}
+\MyLogo
+
+\begin{figure}[H]
+\centering
+%\includegraphics[scale=0.8]{compounds.jpg}
+\includegraphics[width=0.5\textwidth,clip]{compoundsemicondctor1} 
+\caption{Candidate of solar cell materials (absorption
+coefficient, band gap range, cost and enviromental safety) .}
+\label{compoundsemicondctor1}
+\end{figure}
+\end{frame}
+
+
+
+
+\section{Parameterization of Energy bands in $CuIn_{1-x}Ga_{x}Se_2$} 
+\begin{frame}
+\MyLogo
+
+By considering the electron energy dispersion only around the $\Gamma$-point (centre of the Brillouin zone),
+the parabolic band approximation (pba) is utilized:
+
+
+\begin{equation}\label{parabolic}
+E_{j}^{pb}(\textbf{k}) = E_{j}(\textbf{0}) \pm \left[ \frac{\widetilde{\textbf{k}}_{x}^{2}+\widetilde{ \textbf{k}}_{y}^{2}}{m_{j}^{\perp}} +  \frac{\widetilde{\textbf{k}}_{z}^{2}}{m_{j}^{\parallel}} \right]
+\end{equation}
+
+
+A common way to parameterize the energy bands is within the so called $K \cdot P$ approximation. However, 
+the crystal-field interaction as well as the spin-orbit couling of $CuIn_{1-x}Ga_{x}Se_2$ generates rather complex energy dispersions. 
+So we extend the $K \cdot P$ expressions to higher orders.
+\end{frame}
+
+\begin{frame}
+\MyLogo
+\begin{equation}\footnotesize
+\label{parabolic}\begin{split}
+& \small E_j(\textbf{k}) = E_{j}^{pb}(\textbf{k}) + E_j^0 + \Delta_{j,1} \left( \delta_{j,1}^2 \left(  \frac{\widetilde{\textbf{k}}_{x}^{4}+\widetilde{ \textbf{k}}_{y}^{4}}{m_{0}^{2}} \right)  + \delta_{j,2}^2 \left( \frac{\widetilde{\textbf{k}}_{x}^{2}\widetilde{\textbf{k}}_{y}^{2}}{m_{0}^2}  \right) + 1 \right)^{1/2}  \\
+& \small +  \Delta_{j,2} \left( \delta_{j,3}^3 \left(  \frac{\widetilde{\textbf{k}}_{x}^{6}+\widetilde{ \textbf{k}}_{y}^{6}}{m_{0}^{3}} \right)  + \delta_{j,4}^3 \left( \frac{\widetilde{\textbf{k}}_{x}^{2}\widetilde{\textbf{k}}_{y}^{4} + \widetilde{\textbf{k}}_{x}^{4}\widetilde{\textbf{k}}_{y}^{2}}{m_{0}^3}  \right) + 1 \right)^{1/3}  \\
+& \small +  \Delta_{j,3} \left( \delta_{j,5}^2 \left(  \frac{\widetilde{\textbf{k}}_{z}^{4}}{m_0^2} \right) + 1 \right)^{1/2} + \Delta_{j,4} \left( \delta_{j,6}^3 \left(  \frac{\widetilde{\textbf{k}}_{z}^{6}}{m_0^3} \right) + 1 \right)^{1/3} \\
+& \small +  \Delta_{j,5} \left( \delta_{j,7}^2 \left( \frac{\widetilde{\textbf{k}}_{x}^{2}\widetilde{\textbf{k}}_{z}^{2} + \widetilde{\textbf{k}}_{y}^{2}\widetilde{\textbf{k}}_{z}^{2}}{m_{0}^3}  \right) + 1 \right)^{1/2} \\
+& \small +  \Delta_{j,6} \left( \delta_{j,8}^3 \left( \frac{\widetilde{\textbf{k}}_{x}^{4}\widetilde{\textbf{k}}_{z}^{2} + \widetilde{\textbf{k}}_{y}^{4}\widetilde{\textbf{k}}_{z}^{2}}{m_{0}^3}  \right) + \delta_{j,9}^3 \left( \frac{\widetilde{\textbf{k}}_{x}^{2}\widetilde{\textbf{k}}_{z}^{4} + \widetilde{\textbf{k}}_{y}^{2}\widetilde{\textbf{k}}_{z}^{4}}{m_{0}^3}  \right) +  \delta_{j,10}^3 \left( \frac{\widetilde{\textbf{k}}_{x}^{2}\widetilde{\textbf{k}}_{y}^{2}\widetilde{\textbf{k}}_{z}^{2}}{m_{0}^3}  \right) +1 \right)^{1/3} 
+\end{split}\end{equation}
+\end{frame}
+
+
+\begin{frame}
+\MyLogo
+Unfortunately, the rather complex VB energy dispersions of $CuIn_{1-x}Ga_{x}Se_2$ require quite many fitting parameters. The CB, however, needs less parameters.
+
+\vspace*{3\baselineskip}
+
+The lowest conduction band (CB) and the three uppermost valence bands (VBs) of $CuIn_{1-x}Ga_{x}Se_2$ (x=0, 0.5, and 1) in order to better describe of the non-parabolic and anisotropic.
+\end{frame}
+
+
+\begin{frame}
+\MyLogo
+\begin{figure}\label{bandstr}
+  \begin{minipage}{0.5\textwidth} 
+    \includegraphics[width=0.95\textwidth]{seminar/bandstructure}
+  \end{minipage}% 
+  \begin{minipage}{0.5\textwidth}
+    \caption{  Electronic band structure along four directions. the circles are the results of the full band parameterization (fbp), and the dotted lines represent the parabolic band approximation. }
+  \end{minipage}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\MyLogo
+\begin{figure}[H]
+\centering
+%\includegraphics[scale=0.8]{compounds.jpg}
+\includegraphics[width=0.42\textwidth,clip]{seminar/bandstructure_closeup} 
+\caption{Close-up of above figure}
+\label{closeup}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\MyLogo
+\begin{figure}\label{dos}
+  \begin{minipage}{0.5\textwidth} 
+    \includegraphics[width=0.95\textwidth]{seminar/dos}
+  \end{minipage}% 
+  \begin{minipage}{0.5\textwidth}
+    \caption{  Total DOS ($ g_{v/c}(E)$) of the VBs (left panels) and of the CB (right panels) for $CuIn_{1-x}Ga_xSe_2$. The solid lines show the full band parameterization (fbp), and the dashed lines represent the parabolic band approximation (pba). }
+  \end{minipage}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\MyLogo
+\begin{figure}\label{dosmass}
+  \begin{minipage}{0.5\textwidth} 
+    \includegraphics[width=0.7\textwidth]{seminar/dos_mass}
+  \end{minipage}% 
+  \begin{minipage}{0.5\textwidth}
+    \caption{  The DOS mass of the VBs and the CB in $CuIn_{1-x}Ga_{x}Se_{2}$. The upper (lower) panel shows in a wider (narrower) energy region.}
+  \end{minipage}
+\end{figure}
+\end{frame}
+
+
+
+
+\begin{frame}
+\MyLogo
+\begin{figure}[H]
+    \begin{center}
+            \includegraphics[width=0.34\textwidth,clip]{seminar/fermi_sphere_cii}
+            \includegraphics[width=0.3\textwidth,clip]{seminar/fermi_sphere_cig}
+            \includegraphics[width=0.3\textwidth,clip]{seminar/fermi_sphere_cgg}
+     \end{center}
+    \caption{Constant energy surfaces for the three uppermost VBs and the lowest CB for the energies E = 1 meV (left column ellipsoidal) and E = 200 meV (right column). }
+\end{figure}
+\end{frame}
+
+
+
+
+\begin{frame}
+\MyLogo
+\begin{figure}\label{dosmass}
+  \begin{minipage}{0.5\textwidth} 
+    \includegraphics[width=0.9\textwidth]{seminar/intrinsic_carrier_concentration}
+  \end{minipage}% 
+  \begin{minipage}{0.5\textwidth}
+    \caption{Intrinsic carrier concentration as function of temperature. For comparison, the theoretical result for GaAs and Si using the parabolic band approximation is given. }
+  \end{minipage}
+\end{figure}
+\end{frame}
+
+
+
+\begin{frame}
+\MyLogo
+\begin{figure}[H]
+    \begin{center}
+            \includegraphics[width=1\textwidth,clip]{seminar/fermi_level_with_temperature}
+     \end{center}
+    \caption{Fermi level as functon of the temperature fo $p$-type $CuIn_{1-x}Ga_xSe_2$ for the effective doping concentration $N_A$ = $10^{13}, 10^{14}, 10^{15}, ... , $ and $10^{19}$ acceptors/$cm^3$. Solid and dotted lines represent the full band parameterization and the parabolic band approximation, respectively.}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\MyLogo
+\begin{figure}[H]
+    \begin{center}
+            \includegraphics[width=1\textwidth,clip]{seminar/p_type_carrier_concentrication}
+     \end{center}
+    \caption{Free carrier concentration as function fo the temperature in $p-type$ for the effective doping concentration $N_A$ = $10^{13}, 10^{14}, 10^{15}, ... , $ and $10^{19}$ acceptors/$cm^3$. Solid and dotted lines represent the full band parameterization and the parabolic band approximation, respectively.}
+\end{figure}
+\end{frame}
+
+
+\section{Optical Properties of   $ {CuIn_{0.5}Ga_{0.5}Se_2} $}
+\begin{frame}
+\MyLogo
+
+\raggedright {The dielectric function spectra of $CuIn_{0.5}Ga_{0.5}Se_{2}$ is calculated with full-potential linearized augmented plane wave method (Wien2k) using the generalized gradient approximation plus an onsite Coulomb interaction $U$ of the Cu $d$ states, it is compared with experiment as well. Probable electronic origins of the critical features observed are discussed.}
+
+\end{frame}
+
+
+\begin{frame}
+\MyLogo
+\begin{figure}[H]
+    \begin{center}
+            \includegraphics[width=1\textwidth,clip]{seminar/dielectric_function.jpg}
+     \end{center}
+    \caption{(a) Modeled dielectric function spectra for $CuIn_{0.7}Ga_{0.3}Se_2$ taken at 40 K and 300 K. The dielectric function for $CuIn_{0.5}Ga_{0.5}Se_{2}$ calculated by the FPLAPW using the GGA+U}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\MyLogo
+\begin{figure}[H]
+    \begin{center}
+            \includegraphics[width=0.5\textwidth,clip]{seminar/CP.jpg}
+     \end{center}
+    \caption{ Solid red are standard CP lineshapes bet fit to $d^2<\varepsilon_1>/dE^2$ (open circles) and dashed-dotted blue lines are  $d^2<\varepsilon_2>/dE^2$. Energies of each CP are indicated by arrows and labeled in a numeric and alphabetic order.}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\MyLogo
+\begin{figure}[H]
+    \begin{center}
+            \includegraphics[width=0.5\textwidth,clip]{seminar/Band_to_band_analysis}
+     \end{center}
+    \caption{ Band-to-band analysis of the contribution to the total $\varepsilon_2$ spectrum. The most important valence-to-conduction band transitions are marked. Spin-orbit coupling is included.}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\MyLogo
+\begin{figure}[H]
+    \begin{center}
+            \includegraphics[width=1\textwidth,clip]{seminar/CPs}
+     \end{center}
+    \caption{The calculated electronic band structure of $CuIn_{0.5}Ga_{0.5}Se_2$ where the CPs are identified along the main sysmetry directions.}
+\end{figure}
+\end{frame}
+
+
+
+
+
+\section{Current Work}
+\begin{frame}
+\MyLogo
+
+\raggedright {I am involved in the implementation of the Exciting Code (Prof. Claudia Draxl), which is full-potential all-electron density-functional-theory (DFT) package implementing the families of linearized augmented planewave (LAPW) methods.
+The main work is about scalar relativistic approximation, spin-orbit coupling and new $K \cdot P $ method. Everything is under development now.}
+
+\end{frame}
+
+
+\section{}
+\begin{frame}
+\MyLogo
+\begin{center}
+ \Huge Thank you for your time!
+\end{center}
 \end{frame}
 
 

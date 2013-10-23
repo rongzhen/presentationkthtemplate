@@ -2,7 +2,8 @@
 % Class options include: notes, notesonly, handout, trans,
 %                        hidesubsections, shadesubsections,
 %                        inrow, blue, red, grey, brown
-
+%\usepackage{caption}
+\setbeamertemplate{caption}[numbered] 
 \usepackage[absolute,overlay]{textpos}
 \setlength{\TPHorizModule}{1mm} \setlength{\TPVertModule}{1mm}
 \newcommand{\MyLogo}{%
@@ -10,8 +11,8 @@
   \includegraphics[width=1.22cm]{kth_rgb}
  \end{textblock}
 }
-
-
+\renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
+\usepackage{sidecap}
 % Theme for beamer presentation.
 \usepackage{beamerthemesplit} 
 \usepackage{amssymb}
@@ -26,51 +27,16 @@
 \usetikzlibrary{shapes,arrows}
 % Other themes include: beamerthemebars, beamerthemelined, 
 %                       beamerthemetree, beamerthemetreebars  
-\title{Fitting of the effective mass}    % Enter your title between curly braces
-\author{Rongzhen Chen}                 % Enter your name between curly braces
-\institute{Royal Institute of Technology}      % Enter your institute name between curly braces
-\date{January 14, 2013}                    % Enter the date or \today between curly braces
+\title{Parameterization of Energy Bands and Optical Properties in Semiconductor $CuIn_{1-x}Ga_{x}Se_2$}    % Enter your title between curly braces
+\author{Rongzhen Chen}                % Enter your name between curly braces
+\institute{{ {Multiscale Materials Modeling}}\\
+           Department of Materials Science and Engineering \\
+           {Royal Institute of Technology}}      % Enter your institute name between curly braces
+\date{October 23, 2013}                    % Enter the date or \today between curly braces
 
 
 \begin{document}
-\def\hath{\hat{H}}
-\def\wf {\Psi(\{\bf{R}_\textit{I}, \bf{r}_\textit{i} \})}
-\def\wfbo{\Psi_{\textit{bo}}({\textbf{r}_{\textit{i}}})}
-\def\wfh{\Psi_{\textit{h}}({\textbf{r}_{\textit{i}}})}
-\def\wfhit<#1>{\Psi_{\textit{h}}^{#1}({\textbf{r}_{\textit{i}}})}
-\def\bwf<#1><#2>{\phi_{#1}(\textbf{r}_{#2})}
-\def\wfbloch<#1><#2>{\Psi_{#1,#2}(\textbf{r})}
-\def\ubloch<#1><#2>{u_{#1,#2}(\textbf{r})}
-\def\ebloch<#1><#2>{E_{#1,#2}}
-\def\bwfc<#1><#2><#3>{\phi_{#1}^{#3}(\textbf{r}_{#2})}
-\def\sumi<#1> {\sum\limits_\textit{#1}}
-\def\sumij<#1><#2> {\sum\limits_\textit{#1,#2}}
-\def\suminj<#1><#2> {\sum\limits_{\textit{#1} \neq \textit{#2}}}
-\def\coefkhe{-\frac{\hbar^2}{2 m_\textit{e}}}
-\def\coefkhn{-\frac{\hbar^2}{2 M_\textit{I}}}
-\def\nablai2<#1> {{\nabla}_{\textit{#1}}^{2}}
-\def\moperater{-i\hbar \nabla}
-\def\sumg<#1>{{\sum\limits_{\bf{#1}}}}    
-\def\sumlm<#1><#2>{\sum\limits_{{#1}{#2}}}
-\def\coeff<#1><#2><#3>{C_{#1,\bf{k_0}+\bf{#2}}^{#3}}      %C_{j,k_0+G}^{*}
-\def\expkg<#1><#2>{e^{i(\bf{#1}+\bf{#2})\bf{r}}}          %exp{i(k+G)r}
-\def\expg<#1>{e^{i\bf{#1}\bf{r}}}                         %exp{iGr}
-%\def\bwf<#1>{\phi_{\bf{k_0}+\bf{#1}}^{\textbf{APW}}(\textbf{r})}          %phi_{k_0+G}  
-\def\chig<#1>{{\chi_{\bf{kk_0}}(\bf{#1})}}                  %chi_{kk_0}{G}
-%\def\hath{ | \hat{H} | }           
-\def\kplusg<#1><#2>{(\bf{#1}+\bf{#2})}                    % k+G 
-\def\radiaf<#1><#2>{f_{{\ell}^{\prime}{m}^{\prime}} (r_{\alpha},\bf{#1+#2})}    % f(r,k+G)
-\def\radiafc<#1><#2><#3>{f_{{\ell}^{\prime}{m}^{\prime}}^{#3} (r_{\alpha},\bf{#1+#2})}    % f(r,k+G)
-\def\bradiaf{u^{\alpha}_{q,\ell^{\prime}}(r_{\alpha},E_{\ell^{\prime}})}              %u(r_\alpha) did not contain the Energy
-\def\sphfr<#1><#2><#3> {{Y_{#1}^{#3}(\hat{\bf{#2}}_{\alpha})}}                             %Y_{lm}(\hat{r})
-\def\sphfq<#1><#2><#3> {{Y_{#1}^{#3}(\hat{\bf{#2}})}}                             %Y_{lm}(\hat{q})
-\def\gaucoe{C_{{\ell{m}},{\ell^{\prime}m^{\prime}},{\ell^{\prime\prime}m^{\prime\prime}}}}  %Gaunt coefficient
-\def\potvgir{V_{\bf{G^{\prime\prime}}}}                                %V{G}
-\def\potvmt{V^{\alpha}_{{\ell}^{\prime\prime}{m}^{\prime\prime}} (r_{\alpha})}  %V{lm,r}   
-\def\fracatom<#1> {e^{i\bf{#1}\bf{R^\alpha}}}   % exp(iqR)
-\def\bessf<#1>{j_{\ell}({#1}r_{\alpha})}     %j_l(kr)
-\def\dr{\mathrm{d}\bf{r}}
-\def\chikp<#1><#2>{{\chi_{#1,#2}(\textbf{r})}}  
+
 \MyLogo
 
 
@@ -93,137 +59,258 @@
 \end{frame}
 
 
-\section{Backgroundaaa}
+\section{Motivation}
 \begin{frame}
 \MyLogo
-In solid state physcis, the effective mass is defined as follows:
-
-\begin{equation}
- \frac{1}{m^*_{\alpha\beta}} = \frac{1}{\hbar^2} \frac{d^2 E(\textbf{k} )}{dk_\alpha dk_\beta}
-\end{equation}
-
-where $m^*$ is effective mass, and $E(k)$ is the band dispersion relation between energy $E$ and $k$. 
-And the effective mass reflects the band curvature, the flatter of band, the larger effective mass.
-\end{frame}
-
-\begin{frame}
-\MyLogo
-In this report, I will fit the effective mass around the $\Gamma$ point for the semiconductor material $CuInSe_2$ by taking advantage of least-squares fitting in Python.
-
-Energy $E$ is as follows:
-\begin{equation}
- E = \frac{\hbar^2}{2m^*_{xy}} (k^2_x+k^2_y)+ \frac{\hbar^2}{2m^*_z} (k^2_z)
-\end{equation}
-
-which means that we want to know the value $m^*_{xy}$ and $m^*_{z}$ by given the value of $E$ and  $k_x, k_y$ and $k_z$.
-\end{frame}
-
-
-\section{Program Flow} 
-\begin{frame}
-\MyLogo
-%%%%%%%%%%%%%%%%%%%%figure
-\tikzstyle{decision} = [diamond, draw, fill=white!20,
-    text width=10em, text badly centered, node distance=2.5cm, inner sep=0pt]
-\tikzstyle{block} = [rectangle, draw, fill=white!20,
-    text width=12em, text centered, rounded corners, minimum height=3em]
-\tikzstyle{line} = [draw, very thick, color=black!50, -latex']
-
-\begin{figure}[!htb]
-\centering
-
-\begin{tikzpicture}[scale=0.4 , node distance = 2.5cm,transform shape]
-    % Place nodes
-    \node [block] (init) {Reading band dispersion};
-    \node [block, below of=init] (orig) {Plot original band dispersion};
-    \node [block, below of=orig] (fitting) {Fitting band dispersion};
-    \node [block, below of=fitting] (plotf) {Plot fitting result};
-    \node [block, left of=plotf, node distance=6cm] (update) {Re-fitting};
-    \node [decision, below of=plotf, node distance=3.8cm] (converge) {Original==Fitting};
-    \node [block, below of=converge, node distance=3.8cm] (done) {Finished};
-    % Draw edges
-    \path [line] (init) -- (orig);
-    \path [line] (orig) -- (fitting);
-    \path [line] (fitting) -- (plotf);
-    \path [line] (plotf) -- (converge);
-    \path [line] (converge) -| node [near start, color=black] {No} (update);
-    \path [line] (update) |- (fitting);
-    \path [line] (converge) -- node [, color=black] {Yes}(done);
-
-\end{tikzpicture}
-\caption{Flow chart of fitting energy band dispersion}
-\end{figure}
-
-
-\end{frame}
-
-
-
-\section{Result}
-\begin{frame}
-\MyLogo
-Here are the results from fitting, I compare my fitting results (value inside the parentheses in red color) with the paper [C. Persson, Appl. Phys. Lett. 93, 072106 (2008)], where I find out there are quite similar, so the code is 
-reliable to be used.
-
-\begin{table}[ht]
-\caption{Effective mass for $CuInSe_2$}
-% title of Table
-\centering
-% used for centering table
-\begin{tabular}{c c c c c}
-% centered columns (4 columns)
-\hline\hline 
-%inserts double horizontal lines
-  & $c$1 & $v$1 & $v$2 & $v$3\\ [0.5ex]
-% inserts table
-%heading
-\hline \\
-% inserts single horizontal line
-         $m_{xy}$ & 0.08 ({\color{red}0.08}) & 0.14 ({\color{red}0.13}) & 0.25 ({\color{red}0.25})& 0.27 ({\color{red}0.26})\\
-% inserting body of the table
-$m_z$ & 0.09 ({\color{red}0.09}) & 0.66 ({\color{red}0.65}) & 0.12 ({\color{red}0.12})& 0.28 ({\color{red}0.28})\\[0.1ex]
-% [1ex] adds vertical space
-\hline
-%inserts single line
-\end{tabular}
-\label{table:nonlin}
-% is used to refer this table in the text
-\end{table}
-
-\end{frame}
-
-\begin{frame}
-\MyLogo
-And following figures are the fitting result from $v$1 as one example, also with testing results.
-
+According to the statistical review of world energy on 2012. 
 \begin{figure}[H]
      \begin{center}
-            \includegraphics[width=0.5\textwidth]{mz126.eps}
-            \includegraphics[width=0.5\textwidth]{mxy126.eps}
+            \includegraphics[width=0.8\textwidth]{world_Consumption.pdf}
      \end{center}
-    \caption{Fitting results for band $v$1}
+    \caption{ Figure is from BP statistical review of world energy 2012, METO means million tonnes oil equivalent. }
 \end{figure}
 \end{frame}
 
 \begin{frame}
 \MyLogo
 \begin{figure}[H]
-     \begin{center}
-            \includegraphics[width=0.5\textwidth]{test111bandindex126.eps}
-            \includegraphics[width=0.5\textwidth]{test112bandindex126.eps}
-     \end{center}
-    \caption{Testing results for band $v$1}
+\centering
+\includegraphics[width=0.8\textwidth]{efficiency_chart.jpg}
+\caption{Best research-cell efficiencies. Figure is from National Renewable Energy Laboratory (NREL), Golden, Colorado.}
+\label{nrel}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\MyLogo
+
+\begin{figure}[H]
+\centering
+%\includegraphics[scale=0.8]{compounds.jpg}
+\includegraphics[width=0.5\textwidth,clip]{compoundsemicondctor1} 
+\caption{Candidate of solar cell materials (absorption
+coefficient, band gap range, cost and enviromental safety) .}
+\label{compoundsemicondctor1}
 \end{figure}
 \end{frame}
 
 
-\section{Future}
+
+
+\section{Parameterization of Energy Bands in $CuIn_{1-x}Ga_{x}Se_2$} 
 \begin{frame}
 \MyLogo
- There are several places I can improve this code, for example, I can creat a graphical user interface to convenient user, or make this code more flexible, or find the maximum valence band index automatically. 
+
+By considering the electron energy dispersion only around the $\Gamma$-point (centre of the Brillouin zone),
+the parabolic band approximation (pba) is utilized:
+
+
+\begin{equation}\label{parabolic}
+E_{j}^{pb}(\textbf{k}) = E_{j}(\textbf{0}) \pm \left[ \frac{\widetilde{\textbf{k}}_{x}^{2}+\widetilde{ \textbf{k}}_{y}^{2}}{m_{j}^{\perp}} +  \frac{\widetilde{\textbf{k}}_{z}^{2}}{m_{j}^{\parallel}} \right]
+\end{equation}
+
+
+A common way to parameterize the energy bands is within the so called $K \cdot P$ approximation. However, 
+the crystal-field interaction as well as the spin-orbit coupling of $CuIn_{1-x}Ga_{x}Se_2$ generates rather complex energy dispersions. 
+So we extend the $K \cdot P$ expressions to higher orders.
+\end{frame}
+
+\begin{frame}
+\MyLogo
+\begin{equation}\footnotesize
+\label{parabolic}\begin{split}
+& \small E_j(\textbf{k}) = E_{j}^{pb}(\textbf{k}) + E_j^0 + \Delta_{j,1} \left( \delta_{j,1}^2 \left(  \frac{\widetilde{\textbf{k}}_{x}^{4}+\widetilde{ \textbf{k}}_{y}^{4}}{m_{0}^{2}} \right)  + \delta_{j,2}^2 \left( \frac{\widetilde{\textbf{k}}_{x}^{2}\widetilde{\textbf{k}}_{y}^{2}}{m_{0}^2}  \right) + 1 \right)^{1/2}  \\
+& \small +  \Delta_{j,2} \left( \delta_{j,3}^3 \left(  \frac{\widetilde{\textbf{k}}_{x}^{6}+\widetilde{ \textbf{k}}_{y}^{6}}{m_{0}^{3}} \right)  + \delta_{j,4}^3 \left( \frac{\widetilde{\textbf{k}}_{x}^{2}\widetilde{\textbf{k}}_{y}^{4} + \widetilde{\textbf{k}}_{x}^{4}\widetilde{\textbf{k}}_{y}^{2}}{m_{0}^3}  \right) + 1 \right)^{1/3}  \\
+& \small +  \Delta_{j,3} \left( \delta_{j,5}^2 \left(  \frac{\widetilde{\textbf{k}}_{z}^{4}}{m_0^2} \right) + 1 \right)^{1/2} + \Delta_{j,4} \left( \delta_{j,6}^3 \left(  \frac{\widetilde{\textbf{k}}_{z}^{6}}{m_0^3} \right) + 1 \right)^{1/3} \\
+& \small +  \Delta_{j,5} \left( \delta_{j,7}^2 \left( \frac{\widetilde{\textbf{k}}_{x}^{2}\widetilde{\textbf{k}}_{z}^{2} + \widetilde{\textbf{k}}_{y}^{2}\widetilde{\textbf{k}}_{z}^{2}}{m_{0}^3}  \right) + 1 \right)^{1/2} \\
+& \small +  \Delta_{j,6} \left( \delta_{j,8}^3 \left( \frac{\widetilde{\textbf{k}}_{x}^{4}\widetilde{\textbf{k}}_{z}^{2} + \widetilde{\textbf{k}}_{y}^{4}\widetilde{\textbf{k}}_{z}^{2}}{m_{0}^3}  \right) + \delta_{j,9}^3 \left( \frac{\widetilde{\textbf{k}}_{x}^{2}\widetilde{\textbf{k}}_{z}^{4} + \widetilde{\textbf{k}}_{y}^{2}\widetilde{\textbf{k}}_{z}^{4}}{m_{0}^3}  \right) +  \delta_{j,10}^3 \left( \frac{\widetilde{\textbf{k}}_{x}^{2}\widetilde{\textbf{k}}_{y}^{2}\widetilde{\textbf{k}}_{z}^{2}}{m_{0}^3}  \right) +1 \right)^{1/3} 
+\end{split}\end{equation}
 \end{frame}
 
 
+\begin{frame}
+\MyLogo
+Unfortunately, the rather complex VB energy dispersions of $CuIn_{1-x}Ga_{x}Se_2$ require quite many fitting parameters. The CB, however, needs less parameters.
+
+\vspace*{3\baselineskip}
+
+The lowest conduction band (CB) and the three uppermost valence bands (VBs) of $CuIn_{1-x}Ga_{x}Se_2$ (x=0, 0.5, and 1) in order to better describe of the non-parabolic and anisotropic.
+\end{frame}
+
+
+\begin{frame}
+\MyLogo
+\begin{figure}\label{bandstr}
+  \begin{minipage}{0.5\textwidth} 
+    \includegraphics[width=0.95\textwidth]{seminar/bandstructure}
+  \end{minipage}% 
+  \begin{minipage}{0.5\textwidth}
+    \caption{  Electronic band structure along four directions. the circles are the results of the full band parameterization (fbp), and the dotted lines represent the parabolic band approximation. }
+  \end{minipage}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\MyLogo
+\begin{figure}[H]
+\centering
+%\includegraphics[scale=0.8]{compounds.jpg}
+\includegraphics[width=0.42\textwidth,clip]{seminar/bandstructure_closeup} 
+\caption{Close-up of above figure}
+\label{closeup}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\MyLogo
+\begin{figure}\label{dos}
+  \begin{minipage}{0.5\textwidth} 
+    \includegraphics[width=0.95\textwidth]{seminar/dos}
+  \end{minipage}% 
+  \begin{minipage}{0.5\textwidth}
+    \caption{  Total DOS ($ g_{v/c}(E)$) of the VBs (left panels) and of the CB (right panels) for $CuIn_{1-x}Ga_xSe_2$. The solid lines show the full band parameterization (fbp), and the dashed lines represent the parabolic band approximation (pba). }
+  \end{minipage}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\MyLogo
+\begin{figure}\label{dosmass}
+  \begin{minipage}{0.5\textwidth} 
+    \includegraphics[width=0.7\textwidth]{seminar/dos_mass}
+  \end{minipage}% 
+  \begin{minipage}{0.5\textwidth}
+    \caption{  The DOS mass of the VBs and the CB in $CuIn_{1-x}Ga_{x}Se_{2}$. The upper (lower) panel shows in a wider (narrower) energy region.}
+  \end{minipage}
+\end{figure}
+\end{frame}
+
+
+
+
+\begin{frame}
+\MyLogo
+\begin{figure}[H]
+    \begin{center}
+            \includegraphics[width=0.34\textwidth,clip]{seminar/fermi_sphere_cii}
+            \includegraphics[width=0.3\textwidth,clip]{seminar/fermi_sphere_cig}
+            \includegraphics[width=0.3\textwidth,clip]{seminar/fermi_sphere_cgg}
+     \end{center}
+    \caption{Constant energy surfaces for the three uppermost VBs and the lowest CB for the energies E = 1 meV (left column ellipsoidal) and E = 200 meV (right column). }
+\end{figure}
+\end{frame}
+
+
+
+
+%\begin{frame}
+%\MyLogo
+%\begin{figure}\label{dosmass}
+ % \begin{minipage}{0.5\textwidth} 
+ %   \includegraphics[width=0.9\textwidth]{seminar/intrinsic_carrier_concentration}
+ % \end{minipage}% 
+ % \begin{minipage}{0.5\textwidth}
+ %   \caption{Intrinsic carrier concentration as function of temperature. For comparison, the theoretical result for GaAs and Si using the parabolic band approximation is given. }
+ % \end{minipage}
+%\end{figure}
+%\end{frame}
+
+
+
+\begin{frame}
+\MyLogo
+\begin{figure}[H]
+    \begin{center}
+            \includegraphics[width=1\textwidth,clip]{seminar/fermi_level_with_temperature}
+     \end{center}
+    \caption{Fermi level as functon of the temperature fo $p$-type $CuIn_{1-x}Ga_xSe_2$ for the effective doping concentration $N_A$ = $10^{13}, 10^{14}, 10^{15}, ... , $ and $10^{19}$ acceptors/$cm^3$. Solid and dotted lines represent the full band parameterization and the parabolic band approximation, respectively.}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\MyLogo
+\begin{figure}[H]
+    \begin{center}
+            \includegraphics[width=1\textwidth,clip]{seminar/p_type_carrier_concentrication}
+     \end{center}
+    \caption{Free carrier concentration as function fo the temperature in $p-type$ for the effective doping concentration $N_A$ = $10^{13}, 10^{14}, 10^{15}, ... , $ and $10^{19}$ acceptors/$cm^3$. Solid and dotted lines represent the full band parameterization and the parabolic band approximation, respectively.}
+\end{figure}
+\end{frame}
+
+
+\section{Optical Properties of   $ {CuIn_{0.5}Ga_{0.5}Se_2} $}
+\begin{frame}
+\MyLogo
+
+\raggedright {The dielectric function spectra of $CuIn_{0.5}Ga_{0.5}Se_{2}$ is calculated with full-potential linearized augmented plane wave method (Wien2k) using the generalized gradient approximation plus an onsite Coulomb interaction $U$ of the Cu $d$ states, it is compared with experiment as well. Probable electronic origins of the interband critical features (CPs) observed are discussed.}
+
+\end{frame}
+
+
+\begin{frame}
+\MyLogo
+\begin{figure}[H]
+    \begin{center}
+            \includegraphics[width=1\textwidth,clip]{seminar/dielectric_function.jpg}
+     \end{center}
+    \caption{(a) Modeled dielectric function spectra for $CuIn_{0.7}Ga_{0.3}Se_2$ taken at 40 K and 300 K. The dielectric function for $CuIn_{0.5}Ga_{0.5}Se_{2}$ calculated by the FPLAPW using the GGA+U}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\MyLogo
+\begin{figure}[H]
+    \begin{center}
+            \includegraphics[width=0.5\textwidth,clip]{seminar/CP.jpg}
+     \end{center}
+    \caption{ Solid red are standard CP lineshapes bet fit to $d^2<\varepsilon_1>/dE^2$ (open circles) and dashed-dotted blue lines are  $d^2<\varepsilon_2>/dE^2$. Energies of each CP are indicated by arrows and labeled in a numeric and alphabetic order.}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\MyLogo
+\begin{figure}[H]
+    \begin{center}
+            \includegraphics[width=0.5\textwidth,clip]{seminar/Band_to_band_analysis}
+     \end{center}
+    \caption{ Band-to-band analysis of the contribution to the total $\varepsilon_2$ spectrum. The most important valence-to-conduction band transitions are marked. Spin-orbit coupling is included.}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\MyLogo
+\begin{figure}[H]
+    \begin{center}
+            \includegraphics[width=1\textwidth,clip]{seminar/CPs}
+     \end{center}
+    \caption{The calculated electronic band structure of $CuIn_{0.5}Ga_{0.5}Se_2$ where the CPs are identified along the main sysmetry directions.}
+\end{figure}
+\end{frame}
+
+
+
+
+
+\section{Current Work}
+\begin{frame}
+\MyLogo
+
+\raggedright {I am involved in the implementation of the Exciting Code (Prof. Claudia Draxl), which is full-potential all-electron density-functional-theory (DFT) package implementing the families of linearized augmented planewave (LAPW) methods.
+The main work is about scalar relativistic approximation, spin-orbit coupling and new $K \cdot P $ method. Everything is under development now.}
+
+\vspace*{3\baselineskip}
+
+The code mainpage is http://exciting-code.org/, which has many features (TDDFT, GW and BSE ...).
+
+\end{frame}
+
+
+\section{}
 \begin{frame}
 \MyLogo
 \begin{center}

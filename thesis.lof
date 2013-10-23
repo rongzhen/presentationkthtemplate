@@ -1,0 +1,27 @@
+\select@language {english}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Left one: normal interacting system. Right one. The born-Oppenheimer approximation. The arrow denotes the movement of the nucleus or electron}}{4}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Flow chart of the ${\textit {(i+1)}}$th iterations for solving Kohn-Sham equation}}{14}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces The primitive cell of CIGS Red = Cu, yellow = Se, blue = In/Ga }}{16}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces The first Brillouin zone of CIGS}}{17}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces The band structure of CIGS}}{18}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Accuracy testing for Au, the left column is under the condition fixing the rgkmax value but gmaxvr varys. right column is oppsite. Only the matrix element value great than 1E-6 are plotted, and all the imaginary part of value are less than 1E-6, so the imaginary part does not plot in the above figure, for the Y-axis, the Method1 means using equation \ref {sra6}, and Method2 means using equation \ref {sra2}.And the data comes from the first $k$ point during the first self-consistent process. }}{29}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {rgkmx=7, gmaxvr=7}}}{29}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {rgkmx=5, gmaxvr=12}}}{29}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {rgkmx=7, gmaxvr=12}}}{29}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {rgkmx=7, gmaxvr=12}}}{29}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {rgkmx=7, gmaxvr=19}}}{29}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {rgkmx=9, gmaxvr=12}}}{29}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Accuracy testing for Au, the left column is under the condition fixing the rgkmax value but gmaxvr varys. right column is oppsite.Only the matrix element value great than 1E-6 are plotted, for the Y-axis, the Method1 means using equation \ref {soctest2}, and Method2 means using equation \ref {soc}.And the data comes from the first $k$ point during the first self-consistent process. }}{31}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {rgkmx=7, gmaxvr=7}}}{31}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {rgkmx=5, gmaxvr=12}}}{31}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {rgkmx=7, gmaxvr=12}}}{31}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {rgkmx=7, gmaxvr=12}}}{31}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {rgkmx=7, gmaxvr=19}}}{31}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {rgkmx=9, gmaxvr=12}}}{31}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Spin-orbit coupling contribution for Graphene}}{32}
+\addvspace {10\p@ }

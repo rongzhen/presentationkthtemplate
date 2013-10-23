@@ -1,0 +1,31 @@
+\select@language {english}
+\contentsline {chapter}{Preface}{v}
+\contentsline {chapter}{Contents}{vii}
+\contentsline {chapter}{\chapternumberline {1}Introduction}{1}
+\contentsline {chapter}{\chapternumberline {2}Electronic structure calculations }{3}
+\contentsline {section}{\numberline {2.1}The quantum many-body problem}{3}
+\contentsline {section}{\numberline {2.2}The Born-Oppenheimer approximation}{4}
+\contentsline {section}{\numberline {2.3}Hartree and Hartree-Fock approximation}{6}
+\contentsline {subsection}{\numberline {2.3.1}Hartree approximation}{7}
+\contentsline {subsection}{\numberline {2.3.2}Hartree-Fock approximation}{9}
+\contentsline {section}{\numberline {2.4}Density functional theory}{10}
+\contentsline {subsection}{\numberline {2.4.1}The Density as Basic Variable}{10}
+\contentsline {section}{\numberline {2.5}The Kohn-Sham equation}{12}
+\contentsline {section}{\numberline {2.6}The exchange-correlation energy}{14}
+\contentsline {subsection}{\numberline {2.6.1}The local density approximation}{14}
+\contentsline {subsection}{\numberline {2.6.2}The Generalized gradient approximation}{15}
+\contentsline {section}{\numberline {2.7}Solving the secular equation}{15}
+\contentsline {section}{\numberline {2.8}Eigenvalue problem}{16}
+\contentsline {chapter}{\chapternumberline {3}Crystal Structure}{18}
+\contentsline {section}{\numberline {3.1}Primitive cell, unit cell and Brillouin zone}{18}
+\contentsline {section}{\numberline {3.2}Reciprocal space and Brillouin zone}{19}
+\contentsline {section}{\numberline {3.3}Band structure and density of state}{20}
+\contentsline {chapter}{\chapternumberline {4}FP-LAPW method}{21}
+\contentsline {section}{\numberline {4.1}Introduction}{21}
+\contentsline {section}{\numberline {4.2}Augmented Plane Wave method}{22}
+\contentsline {section}{\numberline {4.3}Linearized Augmented Plane Wave method}{22}
+\contentsline {section}{\numberline {4.4}Linearized Augmented Plane Wave method + LO}{23}
+\contentsline {section}{\numberline {4.5}Augmented Plane Wave method plus local orbitals}{23}
+\contentsline {chapter}{\chapternumberline {5}K $\cdot $ P method}{25}
+\contentsline {chapter}{\chapternumberline {6}CIGS material}{27}
+\contentsline {chapter}{\chapternumberline {7}Summary}{28}

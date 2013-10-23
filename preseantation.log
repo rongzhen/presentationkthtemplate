@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.8.27)  17 OCT 2013 15:07
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.8.27)  23 OCT 2013 10:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -644,6 +644,18 @@ Grid set 16 x 16 = 22.7622pt x 17.07166pt
 \TP@tbargs=\toks38
 \TP@prevdepth=\dimen185
 TextBlockOrigin set to 0pt x 0pt
+) (/usr/share/texmf-texlive/tex/latex/sidecap/sidecap.sty
+Package: sidecap 2003/06/06 v1.6f SideCap Package (RN/HjG)
+
+(/usr/share/texmf-texlive/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\SC@BOXWD=\dimen186
+\SC@CAPWD=\dimen187
+\SC@tempdima=\dimen188
+\SC@tempdimb=\dimen189
+\c@SC@C=\count150
+\SC@BOX=\box54
 )
 (/usr/share/texmf/tex/latex/beamer/themes/theme/compatibility/beamerthemesplit.
 sty
@@ -695,8 +707,8 @@ Language: english 2005/03/30 v3.3o English support from the babel system
 (/usr/share/texmf-texlive/tex/generic/babel/babel.def
 File: babel.def 2008/07/06 v3.8l Babel common definitions
 LaTeX Info: Redefining \textlatin on input line 82.
-\babel@savecnt=\count150
-\U@D=\dimen186
+\babel@savecnt=\count151
+\U@D=\dimen190
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
@@ -716,7 +728,7 @@ Package: pgf 2008/01/15 v2.00 (rcs-revision 1.12)
 
 (/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2008/02/13  (rcs-revision 1.4)
-\pgfnodeparttextbox=\box54
+\pgfnodeparttextbox=\box55
 \toks@savedmacro=\toks43
 )
 (/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleplot.code.tex
@@ -725,8 +737,8 @@ File: pgfmoduleplot.code.tex 2008/01/15  (rcs-revision 1.1)
 )
 (/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v2.00 (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen187
-\pgf@nodesepend=\dimen188
+\pgf@nodesepstart=\dimen191
+\pgf@nodesepend=\dimen192
 )
 (/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2007/07/23 v2.00 (rcs-revision 1.1)
@@ -734,37 +746,37 @@ Package: pgfcomp-version-1-18 2007/07/23 v2.00 (rcs-revision 1.1)
 (/usr/share/texmf/tex/latex/pgf/utilities/pgffor.sty
 (/usr/share/texmf/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2007/11/07 v2.00 (rcs-revision 1.8)
-\pgffor@iter=\dimen189
-\pgffor@skip=\dimen190
+\pgffor@iter=\dimen193
+\pgffor@skip=\dimen194
 ))
 (/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2008/02/13 v2.00 (rcs-revision 1.27)
 
 (/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2007/03/09 v2.00 (rcs-revision 1.9)
-\pgf@plot@mark@count=\count151
-\pgfplotmarksize=\dimen191
+\pgf@plot@mark@count=\count152
+\pgfplotmarksize=\dimen195
 )
-\tikz@lastx=\dimen192
-\tikz@lasty=\dimen193
-\tikz@lastxsaved=\dimen194
-\tikz@lastysaved=\dimen195
-\tikzleveldistance=\dimen196
-\tikzsiblingdistance=\dimen197
-\tikz@figbox=\box55
-\tikz@tempbox=\box56
-\tikztreelevel=\count152
-\tikznumberofchildren=\count153
-\tikznumberofcurrentchild=\count154
-\tikz@fig@count=\count155
+\tikz@lastx=\dimen196
+\tikz@lasty=\dimen197
+\tikz@lastxsaved=\dimen198
+\tikz@lastysaved=\dimen199
+\tikzleveldistance=\dimen200
+\tikzsiblingdistance=\dimen201
+\tikz@figbox=\box56
+\tikz@tempbox=\box57
+\tikztreelevel=\count153
+\tikznumberofchildren=\count154
+\tikznumberofcurrentchild=\count155
+\tikz@fig@count=\count156
 
 (/usr/share/texmf/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2008/01/15  (rcs-revision 1.1)
-\pgfmatrixcurrentrow=\count156
-\pgfmatrixcurrentcolumn=\count157
-\pgf@matrix@numberofcolumns=\count158
+\pgfmatrixcurrentrow=\count157
+\pgfmatrixcurrentcolumn=\count158
+\pgf@matrix@numberofcolumns=\count159
 )
-\tikz@expandcount=\count159
+\tikz@expandcount=\count160
 
 (/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopat
 hs.code.tex
@@ -812,10 +824,10 @@ File: tikzlibraryshapes.multipart.code.tex 2008/01/09 v2.00 (rcs-revision 1.1)
 
 (/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryshapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2008/01/15 v2.00 (rcs-revision 1.7)
-\pgfnodepartlowerbox=\box57
-\pgfnodepartsecondbox=\box58
-\pgfnodepartthirdbox=\box59
-\pgfnodepartfourthbox=\box60
+\pgfnodepartlowerbox=\box58
+\pgfnodepartsecondbox=\box59
+\pgfnodepartthirdbox=\box60
+\pgfnodepartfourthbox=\box61
 )))
 (/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrow
 s.code.tex
@@ -824,34 +836,58 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v2.00 (rcs-revision 1.1)
 (/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2007/06/07 v2.00 (rcs-revision 1.7)
 ))
-(./preseantation.aux)
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 38.
+
+(./preseantation.aux
+
+LaTeX Warning: Label `parabolic' multiply defined.
+
+)
 \openout1 = `preseantation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
  (/usr/share/texmf/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count160
-\scratchdimen=\dimen198
-\scratchbox=\box61
-\nofMPsegments=\count161
-\nofMParguments=\count162
+\scratchcounter=\count161
+\scratchdimen=\dimen202
+\scratchbox=\box62
+\nofMPsegments=\count162
+\nofMParguments=\count163
 \everyMPshowfont=\toks44
-\MPscratchCnt=\count163
-\MPscratchDim=\dimen199
-\MPnumerator=\count164
+\MPscratchCnt=\count164
+\MPscratchDim=\dimen203
+\MPnumerator=\count165
 \everyMPtoPDFconversion=\toks45
 )
 *geometry auto-detecting driver*
@@ -895,71 +931,107 @@ driver: pdftex
 
 (1in=72.27pt, 1cm=28.45pt)
 -----------------------
-Package hyperref Info: Link coloring OFF on input line 35.
+Package hyperref Info: Link coloring OFF on input line 38.
 (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
 Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count165
+\c@section@level=\count166
 )
-LaTeX Info: Redefining \ref on input line 35.
-LaTeX Info: Redefining \pageref on input line 35.
+LaTeX Info: Redefining \ref on input line 38.
+LaTeX Info: Redefining \pageref on input line 38.
 
 (./preseantation.out) (./preseantation.out)
 \@outlinefile=\write6
 \openout6 = `preseantation.out'.
 
-\AtBeginShipoutBox=\box62
+\AtBeginShipoutBox=\box63
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 35.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 38.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 35.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 38.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 35.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 38.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 35.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 38.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 35.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 35.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 38.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 38.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 35.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 38.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 35.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 35.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 38.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 38.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 35.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 38.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 35.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 35.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 38.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 38.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 35.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 38.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 35.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 38.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 35.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 38.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 35.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 38.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 35.
+(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 38.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 35.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 38.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 35.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 38.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 35.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 38.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 35.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 38.
 
 (/usr/share/texmf-texlive/tex/latex/translator/translator-theorem-dictionary-En
 glish.dict
 Dictionary: translator-theorem-dictionary, Language: English 
-) ABD: EveryShipout initializing macros (./preseantation.nav)
-<kth_rgb.jpg, id=36, 71.42685pt x 71.42685pt>
+) ABD: EveryShipout initializing macros
+(/usr/share/texmf-texlive/tex/latex/ms/ragged2e.sty
+Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
+
+(/usr/share/texmf-texlive/tex/latex/ms/everysel.sty
+Package: everysel 1999/06/08 v1.03 EverySelectfont Package (MS)
+LaTeX Info: Redefining \selectfont on input line 125.
+)
+\CenteringLeftskip=\skip57
+\RaggedLeftLeftskip=\skip58
+\RaggedRightLeftskip=\skip59
+\CenteringRightskip=\skip60
+\RaggedLeftRightskip=\skip61
+\RaggedRightRightskip=\skip62
+\CenteringParfillskip=\skip63
+\RaggedLeftParfillskip=\skip64
+\RaggedRightParfillskip=\skip65
+\JustifyingParfillskip=\skip66
+\CenteringParindent=\skip67
+\RaggedLeftParindent=\skip68
+\RaggedRightParindent=\skip69
+\JustifyingParindent=\skip70
+) (./preseantation.nav)
+LaTeX Font Info:    Try loading font information for U+msa on input line 38.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 38.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+Overfull \hbox (89.57367pt too wide) in paragraph at lines 38--38
+ [][][][]  
+ []
+
+<kth_rgb.jpg, id=40, 71.42685pt x 71.42685pt>
 File: kth_rgb.jpg Graphic file (type jpg)
  <use kth_rgb.jpg>
 File: kth_rgb.jpg Graphic file (type jpg)
@@ -967,127 +1039,517 @@ File: kth_rgb.jpg Graphic file (type jpg)
 <use kth_rgb.jpg>
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/n' in size <4> not available
-(Font)              size <5> substituted on input line 82.
+(Font)              size <5> substituted on input line 48.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 82.
+(Font)              size <5> substituted on input line 48.
+
+
+Overfull \hbox (89.57367pt too wide) has occurred while \output is active
+ [][][][]  
+ []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
  <./kth_rgb.jpg>]
 (./preseantation.toc)
 File: kth_rgb.jpg Graphic file (type jpg)
- <use kth_rgb.jpg> [2
+ <use kth_rgb.jpg>
+Overfull \hbox (89.57367pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[2
 
 ]
 File: kth_rgb.jpg Graphic file (type jpg)
- <use kth_rgb.jpg>
-LaTeX Font Info:    Try loading font information for U+msa on input line 107.
+ <use kth_rgb.jpg> <world_Consumption.pdf, id=125, 744.7825pt x 403.5075pt>
+File: world_Consumption.pdf Graphic file (type pdf)
 
-(/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2009/06/22 v3.00 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 107.
+<use world_Consumption.pdf>
+Overfull \hbox (89.57367pt too wide) has occurred while \output is active
+ [][][][]  
+ []
 
-(/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-) [3
+[3
 
-]
+ <./world_Consumption.pdf>]
 File: kth_rgb.jpg Graphic file (type jpg)
  <use kth_rgb.jpg>
+<efficiency_chart.jpg, id=171, 2697.07625pt x 1781.65625pt>
+File: efficiency_chart.jpg Graphic file (type jpg)
+
+<use efficiency_chart.jpg>
+Overfull \hbox (89.57367pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
 [4
 
-]
+ <./efficiency_chart.jpg>]
 File: kth_rgb.jpg Graphic file (type jpg)
  <use kth_rgb.jpg>
-Overfull \vbox (4.37747pt too high) detected at line 158
+Package epstopdf Info: Source file: <compoundsemicondctor1.eps>
+(epstopdf)                    date: 2013-04-12 15:06:40
+(epstopdf)                    size: 283846 bytes
+(epstopdf)             Output file: <compoundsemicondctor1-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2013-04-12 15:11:22
+(epstopdf)                    size: 19349 bytes
+(epstopdf)             Command: <epstopdf --outfile=compoundsemicondctor1-eps-c
+onverted-to.pdf compoundsemicondctor1.eps>
+(epstopdf)             \includegraphics on input line 95.
+Package epstopdf Info: Output file is already uptodate.
+
+<compoundsemicondctor1-eps-converted-to.pdf, id=203, 307.1475pt x 280.04625pt>
+File: compoundsemicondctor1-eps-converted-to.pdf Graphic file (type pdf)
+
+<use compoundsemicondctor1-eps-converted-to.pdf>
+Overfull \hbox (89.57367pt too wide) has occurred while \output is active
+ [][][][]  
  []
 
 [5
 
-]
+ <./compoundsemicondctor1-eps-converted-to.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 100.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 100.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 100.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 100.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 100.
+
 File: kth_rgb.jpg Graphic file (type jpg)
- <use kth_rgb.jpg> [6
+<use kth_rgb.jpg>
+Overfull \hbox (89.57367pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[6
 
 ]
 File: kth_rgb.jpg Graphic file (type jpg)
  <use kth_rgb.jpg>
-Package epstopdf Info: Source file: <mz126.eps>
-(epstopdf)                    date: 2013-10-17 15:03:28
-(epstopdf)                    size: 29412 bytes
-(epstopdf)             Output file: <mz126-eps-converted-to.pdf>
-(epstopdf)                    date: 2013-10-17 15:03:28
-(epstopdf)                    size: 19012 bytes
-(epstopdf)             Command: <epstopdf --outfile=mz126-eps-converted-to.pdf 
-mz126.eps>
-(epstopdf)             \includegraphics on input line 206.
-Package epstopdf Info: Output file is already uptodate.
 
-<mz126-eps-converted-to.pdf, id=243, 361.35pt x 252.945pt>
-File: mz126-eps-converted-to.pdf Graphic file (type pdf)
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 12
+8.
 
-<use mz126-eps-converted-to.pdf>
-Package epstopdf Info: Source file: <mxy126.eps>
-(epstopdf)                    date: 2013-10-17 15:03:28
-(epstopdf)                    size: 22934 bytes
-(epstopdf)             Output file: <mxy126-eps-converted-to.pdf>
-(epstopdf)                    date: 2013-10-17 15:03:28
-(epstopdf)                    size: 8157 bytes
-(epstopdf)             Command: <epstopdf --outfile=mxy126-eps-converted-to.pdf
- mxy126.eps>
-(epstopdf)             \includegraphics on input line 206.
-Package epstopdf Info: Output file is already uptodate.
+pdfTeX warning (ext4): destination with the same identifier (name{parabolic}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.128 \end{frame}
+                 
 
-<mxy126-eps-converted-to.pdf, id=244, 361.35pt x 252.945pt>
-File: mxy126-eps-converted-to.pdf Graphic file (type pdf)
+LaTeX Font Warning: Command \small invalid in math mode on input line 128.
 
-<use mxy126-eps-converted-to.pdf> [7
 
- <./mz126-eps-converted-to.pdf> <./mxy126-eps-converted-to.pdf>]
-File: kth_rgb.jpg Graphic file (type jpg)
- <use kth_rgb.jpg>
-Package epstopdf Info: Source file: <test111bandindex126.eps>
-(epstopdf)                    date: 2013-10-17 15:03:28
-(epstopdf)                    size: 24852 bytes
-(epstopdf)             Output file: <test111bandindex126-eps-converted-to.pdf>
-(epstopdf)                    date: 2013-10-17 15:03:28
-(epstopdf)                    size: 10824 bytes
-(epstopdf)             Command: <epstopdf --outfile=test111bandindex126-eps-con
-verted-to.pdf test111bandindex126.eps>
-(epstopdf)             \includegraphics on input line 217.
-Package epstopdf Info: Output file is already uptodate.
+LaTeX Font Warning: Command \small invalid in math mode on input line 128.
 
-<test111bandindex126-eps-converted-to.pdf, id=286, 361.35pt x 252.945pt>
-File: test111bandindex126-eps-converted-to.pdf Graphic file (type pdf)
 
-<use test111bandindex126-eps-converted-to.pdf>
-Package epstopdf Info: Source file: <test112bandindex126.eps>
-(epstopdf)                    date: 2013-10-17 15:03:28
-(epstopdf)                    size: 25110 bytes
-(epstopdf)             Output file: <test112bandindex126-eps-converted-to.pdf>
-(epstopdf)                    date: 2013-10-17 15:03:28
-(epstopdf)                    size: 10888 bytes
-(epstopdf)             Command: <epstopdf --outfile=test112bandindex126-eps-con
-verted-to.pdf test112bandindex126.eps>
-(epstopdf)             \includegraphics on input line 217.
-Package epstopdf Info: Output file is already uptodate.
+LaTeX Font Warning: Command \small invalid in math mode on input line 128.
 
-<test112bandindex126-eps-converted-to.pdf, id=287, 361.35pt x 252.945pt>
-File: test112bandindex126-eps-converted-to.pdf Graphic file (type pdf)
 
-<use test112bandindex126-eps-converted-to.pdf> [8
+LaTeX Font Warning: Command \small invalid in math mode on input line 128.
 
- <./test111bandindex126-eps-converted-to.pdf> <./test112bandindex126-eps-conver
-ted-to.pdf>]
-File: kth_rgb.jpg Graphic file (type jpg)
 
-<use kth_rgb.jpg> [9
+LaTeX Font Warning: Command \small invalid in math mode on input line 128.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 128.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 128.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 128.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 128.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 128.
+
+
+Overfull \hbox (11.62297pt too wide) in paragraph at lines 128--128
+[]  
+ []
+
+
+Overfull \hbox (89.57367pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[7
 
 ]
 File: kth_rgb.jpg Graphic file (type jpg)
- <use kth_rgb.jpg> [10
+ <use kth_rgb.jpg>
+Overfull \hbox (89.57367pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[8
+
+]
+File: kth_rgb.jpg Graphic file (type jpg)
+ <use kth_rgb.jpg>
+Package epstopdf Info: Source file: <seminar/bandstructure.eps>
+(epstopdf)                    date: 2013-02-13 12:09:23
+(epstopdf)                    size: 105511 bytes
+(epstopdf)             Output file: <seminar/bandstructure-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2013-10-20 10:34:06
+(epstopdf)                    size: 69851 bytes
+(epstopdf)             Command: <epstopdf --outfile=seminar/bandstructure-eps-c
+onverted-to.pdf seminar/bandstructure.eps>
+(epstopdf)             \includegraphics on input line 151.
+Package epstopdf Info: Output file is already uptodate.
+
+<seminar/bandstructure-eps-converted-to.pdf, id=347, 333.245pt x 494.84875pt>
+File: seminar/bandstructure-eps-converted-to.pdf Graphic file (type pdf)
+
+<use seminar/bandstructure-eps-converted-to.pdf>
+Overfull \vbox (7.17613pt too high) detected at line 151
+ []
+
+
+Overfull \hbox (89.57367pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[9
+
+ <./seminar/bandstructure-eps-converted-to.pdf>]
+File: kth_rgb.jpg Graphic file (type jpg)
+ <use kth_rgb.jpg>
+Package epstopdf Info: Source file: <seminar/bandstructure_closeup.eps>
+(epstopdf)                    date: 2013-10-19 11:42:54
+(epstopdf)                    size: 82629 bytes
+(epstopdf)             Output file: <seminar/bandstructure_closeup-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2013-10-20 10:51:04
+(epstopdf)                    size: 55693 bytes
+(epstopdf)             Command: <epstopdf --outfile=seminar/bandstructure_close
+up-eps-converted-to.pdf seminar/bandstructure_closeup.eps>
+(epstopdf)             \includegraphics on input line 163.
+Package epstopdf Info: Output file is already uptodate.
+
+<seminar/bandstructure_closeup-eps-converted-to.pdf, id=392, 340.27126pt x 492.
+84125pt>
+File: seminar/bandstructure_closeup-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use seminar/bandstructure_closeup-eps-converted-to.pdf>
+Overfull \vbox (5.90378pt too high) detected at line 163
+ []
+
+
+Overfull \hbox (89.57367pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[10
+
+ <./seminar/bandstructure_closeup-eps-converted-to.pdf>]
+File: kth_rgb.jpg Graphic file (type jpg)
+ <use kth_rgb.jpg>
+Package epstopdf Info: Source file: <seminar/dos.eps>
+(epstopdf)                    date: 2011-09-05 14:27:27
+(epstopdf)                    size: 112323 bytes
+(epstopdf)             Output file: <seminar/dos-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-20 10:58:50
+(epstopdf)                    size: 61110 bytes
+(epstopdf)             Command: <epstopdf --outfile=seminar/dos-eps-converted-t
+o.pdf seminar/dos.eps>
+(epstopdf)             \includegraphics on input line 175.
+Package epstopdf Info: Output file is already uptodate.
+
+<seminar/dos-eps-converted-to.pdf, id=439, 353.32pt x 492.84125pt>
+File: seminar/dos-eps-converted-to.pdf Graphic file (type pdf)
+
+<use seminar/dos-eps-converted-to.pdf>
+Overfull \hbox (89.57367pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[11
+
+ <./seminar/dos-eps-converted-to.pdf>]
+File: kth_rgb.jpg Graphic file (type jpg)
+ <use kth_rgb.jpg>
+Package epstopdf Info: Source file: <seminar/dos_mass.eps>
+(epstopdf)                    date: 2013-10-19 11:49:40
+(epstopdf)                    size: 110869 bytes
+(epstopdf)             Output file: <seminar/dos_mass-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-20 11:12:45
+(epstopdf)                    size: 58198 bytes
+(epstopdf)             Command: <epstopdf --outfile=seminar/dos_mass-eps-conver
+ted-to.pdf seminar/dos_mass.eps>
+(epstopdf)             \includegraphics on input line 188.
+Package epstopdf Info: Output file is already uptodate.
+
+<seminar/dos_mass-eps-converted-to.pdf, id=482, 255.95625pt x 517.935pt>
+File: seminar/dos_mass-eps-converted-to.pdf Graphic file (type pdf)
+
+<use seminar/dos_mass-eps-converted-to.pdf>
+Overfull \vbox (8.06511pt too high) detected at line 188
+ []
+
+
+Overfull \hbox (89.57367pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[12
+
+ <./seminar/dos_mass-eps-converted-to.pdf>]
+File: kth_rgb.jpg Graphic file (type jpg)
+ <use kth_rgb.jpg>
+Package epstopdf Info: Source file: <seminar/fermi_sphere_cii.eps>
+(epstopdf)                    date: 2013-03-11 10:49:23
+(epstopdf)                    size: 13035149 bytes
+(epstopdf)             Output file: <seminar/fermi_sphere_cii-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2013-10-20 11:02:22
+(epstopdf)                    size: 222525 bytes
+(epstopdf)             Command: <epstopdf --outfile=seminar/fermi_sphere_cii-ep
+s-converted-to.pdf seminar/fermi_sphere_cii.eps>
+(epstopdf)             \includegraphics on input line 203.
+Package epstopdf Info: Output file is already uptodate.
+
+<seminar/fermi_sphere_cii-eps-converted-to.pdf, id=527, 546.04pt x 842.14626pt>
+File: seminar/fermi_sphere_cii-eps-converted-to.pdf Graphic file (type pdf)
+<use seminar/fermi_sphere_cii-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <seminar/fermi_sphere_cig.eps>
+(epstopdf)                    date: 2013-03-11 10:48:45
+(epstopdf)                    size: 13035149 bytes
+(epstopdf)             Output file: <seminar/fermi_sphere_cig-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2013-10-20 11:02:39
+(epstopdf)                    size: 321797 bytes
+(epstopdf)             Command: <epstopdf --outfile=seminar/fermi_sphere_cig-ep
+s-converted-to.pdf seminar/fermi_sphere_cig.eps>
+(epstopdf)             \includegraphics on input line 203.
+Package epstopdf Info: Output file is already uptodate.
+
+<seminar/fermi_sphere_cig-eps-converted-to.pdf, id=529, 473.77pt x 829.0975pt>
+File: seminar/fermi_sphere_cig-eps-converted-to.pdf Graphic file (type pdf)
+
+<use seminar/fermi_sphere_cig-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <seminar/fermi_sphere_cgg.eps>
+(epstopdf)                    date: 2013-03-11 10:48:13
+(epstopdf)                    size: 13035149 bytes
+(epstopdf)             Output file: <seminar/fermi_sphere_cgg-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2013-10-20 11:02:56
+(epstopdf)                    size: 291965 bytes
+(epstopdf)             Command: <epstopdf --outfile=seminar/fermi_sphere_cgg-ep
+s-converted-to.pdf seminar/fermi_sphere_cgg.eps>
+(epstopdf)             \includegraphics on input line 203.
+Package epstopdf Info: Output file is already uptodate.
+
+<seminar/fermi_sphere_cgg-eps-converted-to.pdf, id=531, 475.7775pt x 837.1275pt
+>
+File: seminar/fermi_sphere_cgg-eps-converted-to.pdf Graphic file (type pdf)
+ <use seminar/fermi_sphere_cgg-eps-converted-to.pdf>
+Overfull \vbox (4.12933pt too high) detected at line 203
+ []
+
+
+Overfull \hbox (89.57367pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[13
+
+ <./seminar/fermi_sphere_cii-eps-converted-to.pdf> <./seminar/fermi_sphere_cig-
+eps-converted-to.pdf> <./seminar/fermi_sphere_cgg-eps-converted-to.pdf>]
+File: kth_rgb.jpg Graphic file (type jpg)
+
+<use kth_rgb.jpg>
+Package epstopdf Info: Source file: <seminar/fermi_level_with_temperature.eps>
+(epstopdf)                    date: 2013-10-19 12:04:20
+(epstopdf)                    size: 34014 bytes
+(epstopdf)             Output file: <seminar/fermi_level_with_temperature-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2013-10-21 11:48:59
+(epstopdf)                    size: 41760 bytes
+(epstopdf)             Command: <epstopdf --outfile=seminar/fermi_level_with_te
+mperature-eps-converted-to.pdf seminar/fermi_level_with_temperature.eps>
+(epstopdf)             \includegraphics on input line 230.
+Package epstopdf Info: Output file is already uptodate.
+
+<seminar/fermi_level_with_temperature-eps-converted-to.pdf, id=613, 589.20125pt
+ x 222.8325pt>
+File: seminar/fermi_level_with_temperature-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use seminar/fermi_level_with_temperature-eps-converted-to.pdf>
+Underfull \hbox (badness 5064) in paragraph at lines 230--230
+[]\OT1/cmss/m/n/10 Figure 9:[] Fermi level as func-ton of the tem-per-a-ture fo
+ $\OT1/cmss/m/it/10 p$\OT1/cmss/m/n/10 -
+ []
+
+
+Underfull \hbox (badness 1803) in paragraph at lines 230--230
+\OT1/cmss/m/n/10 type $\OT1/cmss/m/it/10 CuIn[]Ga[]Se[]$ \OT1/cmss/m/n/10 for t
+he ef-fec-tive dop-ing con-cen-tra-tion $\OT1/cmss/m/it/10 N[]$ \OT1/cmss/m/n/1
+0 =
+ []
+
+
+Overfull \hbox (89.57367pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[14
+
+ <./seminar/fermi_level_with_temperature-eps-converted-to.pdf>]
+File: kth_rgb.jpg Graphic file (type jpg)
+
+<use kth_rgb.jpg>
+Package epstopdf Info: Source file: <seminar/p_type_carrier_concentrication.eps
+>
+(epstopdf)                    date: 2013-10-19 12:00:31
+(epstopdf)                    size: 234267 bytes
+(epstopdf)             Output file: <seminar/p_type_carrier_concentrication-eps
+-converted-to.pdf>
+(epstopdf)                    date: 2013-10-21 09:37:50
+(epstopdf)                    size: 108852 bytes
+(epstopdf)             Command: <epstopdf --outfile=seminar/p_type_carrier_conc
+entrication-eps-converted-to.pdf seminar/p_type_carrier_concentrication.eps>
+(epstopdf)             \includegraphics on input line 241.
+Package epstopdf Info: Output file is already uptodate.
+
+<seminar/p_type_carrier_concentrication-eps-converted-to.pdf, id=652, 586.19pt 
+x 225.84375pt>
+File: seminar/p_type_carrier_concentrication-eps-converted-to.pdf Graphic file 
+(type pdf)
+
+<use seminar/p_type_carrier_concentrication-eps-converted-to.pdf>
+Overfull \hbox (89.57367pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[15
+
+ <./seminar/p_type_carrier_concentrication-eps-converted-to.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 244.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 244.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 244.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 244.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 244.
+
+File: kth_rgb.jpg Graphic file (type jpg)
+<use kth_rgb.jpg>
+Overfull \hbox (89.57367pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[16
+
+]
+File: kth_rgb.jpg Graphic file (type jpg)
+ <use kth_rgb.jpg>
+<seminar/dielectric_function.jpg, id=722, 627.23222pt x 295.32556pt>
+File: seminar/dielectric_function.jpg Graphic file (type jpg)
+
+<use seminar/dielectric_function.jpg>
+Overfull \hbox (89.57367pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[17
+
+ <./seminar/dielectric_function.jpg>]
+File: kth_rgb.jpg Graphic file (type jpg)
+ <use kth_rgb.jpg>
+<seminar/CP.jpg, id=756, 702.625pt x 667.49374pt>
+File: seminar/CP.jpg Graphic file (type jpg)
+ <use seminar/CP.jpg>
+Overfull \hbox (89.57367pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[18
+
+ <./seminar/CP.jpg>]
+File: kth_rgb.jpg Graphic file (type jpg)
+ <use kth_rgb.jpg>
+<seminar/Band_to_band_analysis.jpg, id=790, 308.352pt x 351.2322pt>
+File: seminar/Band_to_band_analysis.jpg Graphic file (type jpg)
+
+<use seminar/Band_to_band_analysis.jpg>
+Overfull \vbox (16.39102pt too high) detected at line 282
+ []
+
+
+Overfull \hbox (89.57367pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[19
+
+ <./seminar/Band_to_band_analysis.jpg>]
+File: kth_rgb.jpg Graphic file (type jpg)
+ <use kth_rgb.jpg>
+<seminar/CPs.jpg, id=824, 595.1647pt x 351.14717pt>
+File: seminar/CPs.jpg Graphic file (type jpg)
+ <use seminar/CPs.jpg>
+Overfull \vbox (10.67653pt too high) detected at line 293
+ []
+
+
+Overfull \hbox (89.57367pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[20
+
+ <./seminar/CPs.jpg>]
+File: kth_rgb.jpg Graphic file (type jpg)
+ <use kth_rgb.jpg>
+Overfull \hbox (89.57367pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[21
+
+]
+File: kth_rgb.jpg Graphic file (type jpg)
+ <use kth_rgb.jpg>
+Overfull \hbox (89.57367pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[22
 
 ]
 \tf@nav=\write7
@@ -1104,28 +1566,40 @@ File: kth_rgb.jpg Graphic file (type jpg)
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 16759 strings out of 493848
- 316613 string characters out of 1152823
- 430290 words of memory out of 3000000
- 19528 multiletter control sequences out of 15000+50000
- 15102 words of font info for 56 fonts, out of 3000000 for 9000
+ 17021 strings out of 493848
+ 321614 string characters out of 1152823
+ 443976 words of memory out of 3000000
+ 19716 multiletter control sequences out of 15000+50000
+ 18911 words of font info for 70 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 45i,19n,62p,321b,733s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sha
-re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-tex
-live/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-texlive/fonts/
-type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-texlive/fonts/type1/publi
-c/amsfonts/cm/cmss17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
-cm/cmss8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmssbx10.
-pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/
-share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texmf
--texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/fon
-ts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on preseantation.pdf (10 pages, 462241 bytes).
+ 45i,24n,56p,555b,568s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/sha
+re/texmf-texlive/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texm
+f-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/f
+onts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-texlive/fonts/type1/p
+ublic/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfon
+ts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.
+pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/sh
+are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-t
+exlive/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-texlive/font
+s/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texmf-texlive/fonts/type1/pub
+lic/amsfonts/cm/cmss8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts
+/cm/cmss9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmssbx10
+.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr
+/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/share/tex
+mf-texlive/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texmf-texlive/
+fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/share/texmf-texlive/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/ams
+fonts/cm/cmsy5.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cms
+y7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on preseantation.pdf (22 pages, 3482188 bytes).
 PDF statistics:
- 432 PDF objects out of 1000 (max. 8388607)
- 27 named destinations out of 1000 (max. 500000)
- 98 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1001 PDF objects out of 1200 (max. 8388607)
+ 58 named destinations out of 1000 (max. 500000)
+ 232 words of extra memory for PDF output out of 10000 (max. 10000000)
 

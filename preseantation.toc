@@ -1,6 +1,6 @@
 \beamer@endinputifotherversion {3.07pt}
 \select@language {english}
-\beamer@sectionintoc {2}{Backgroundaaa}{3}{0}{1}
-\beamer@sectionintoc {3}{Program Flow}{5}{0}{2}
-\beamer@sectionintoc {4}{Result}{6}{0}{3}
-\beamer@sectionintoc {5}{Future}{9}{0}{4}
+\beamer@sectionintoc {2}{Motivation}{3}{0}{1}
+\beamer@sectionintoc {3}{Parameterization of Energy Bands in $CuIn_{1-x}Ga_{x}Se_2$}{6}{0}{2}
+\beamer@sectionintoc {4}{Optical Properties of $ {CuIn_{0.5}Ga_{0.5}Se_2} $}{16}{0}{3}
+\beamer@sectionintoc {5}{Current Work}{21}{0}{4}

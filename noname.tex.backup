@@ -1,0 +1,357 @@
+\documentclass[a4paper, 12pt, titlepage,oneside,drop]{kthesis}
+\usepackage[latin1]{inputenc}    % Accept european-encoded (latin1) characters.
+\usepackage{a4wide}              % Wide paper
+
+
+%\frenchspacing
+% For Swedish reports
+
+\usepackage[swedish,english]{babel}
+\usepackage{cite}
+
+\usepackage[pdftex]{graphicx}
+\usepackage{epstopdf}
+\usepackage{graphicx}   % For eps figures
+
+%\usepackage{subfigure}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\pagestyle{headings}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{epsfig}
+
+%\usepackage{psfrag}
+\usepackage[hang,indention=-0.5cm,width=14cm,font=small,labelfont=bf,labelsep=period]{caption}
+
+\usepackage{palatino}
+
+\setlength{\parskip}{6pt}  % 12 pt = hopp mellan stycken
+\setlength{\parindent}{0pt} % 0 pt  = indrag
+%\setcaptionwidth{12cm}
+%\captionlabel
+
+
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+%And here the document begins!
+
+\begin{document}
+\def\hath{\hat{H}}
+\def\wf {\Psi(\{\textbf{R}_\textit{I}, \textbf{r}_\textit{i} \})}
+\def\wfbo{\Psi_{\textit{bo}}({\textbf{r}_{\textit{i}}},\textbf{R} )}
+\def\wfh{\Psi_{\textit{h}}(\{\textbf{r}_{\textit{i}}\})}
+\def\wfhit<#1>{\Psi_{\textit{h}}^{#1}({\textbf{r}_{\textit{i}}})}
+\def\bwf<#1><#2>{\phi_{#1}(\textbf{r}_{#2})}
+\def\bwfn<#1><#2>{\phi_{#1}(\textbf{r}{#2})}
+\def\wfbloch<#1><#2>{\Psi_{#1,#2}(\textbf{r})}
+\def\ubloch<#1><#2>{u_{#1,#2}(\textbf{r})}
+\def\ebloch<#1><#2>{E_{#1,#2}}
+\def\bwfc<#1><#2><#3>{\phi_{#1}^{#3}(\textbf{r}_{#2})}
+\def\sumi<#1> {\sum\limits_\textit{#1}}
+\def\sumij<#1><#2> {\sum\limits_\textit{#1,#2}}
+\def\suminj<#1><#2> {\sum\limits_{\textit{#1} \neq \textit{#2}}}
+\def\coefkhe{-\frac{\hbar^2}{2 m_\textit{e}}}
+\def\coefkhn{-\frac{\hbar^2}{2 M_\textit{I}}}
+
+\def\nablaiabc<#1> { #1}
+
+\def\moperater{-i\hbar \nabla}
+\def\sumg<#1>{{\sum\limits_{\textbf{#1}}}}    
+\def\sumlm<#1><#2>{\sum\limits_{{#1}{#2}}}
+\def\coeff<#1><#2><#3>{C_{#1,{\textbf k_0} +\textbf{#2}}^{#3}}      %C_{j,k_0+G}^{*}
+\def\expkg<#1><#2>{e^{i(\textbf{#1}+\textbf{#2})\textbf{r}}}          %exp{i(k+G)r}
+\def\expg<#1>{e^{i\textbf{#1}\textbf{r}}}                         %exp{iGr}
+%\def\bwf<#1>{\phi_{\textbf{k_0}+\textbf{#1}}^{\textbf{APW}}(\textbf{r})}          %phi_{k_0+G}  
+\def\chig<#1>{{\chi_{\textbf kk_0}(\textbf{#1})}}                  %chi_{kk_0}{G}
+%\def\hath{ | \hat{H} | }           
+\def\kplusg<#1><#2>{(\textbf{#1}+\textbf{#2})}                    % k+G 
+\def\radiaf<#1><#2>{f_{{\ell}^{\prime}{m}^{\prime}} (r_{\alpha},\textbf{#1+#2})}    % f(r,k+G)
+\def\radiafc<#1><#2><#3>{f_{{\ell}^{\prime}{m}^{\prime}}^{#3} (r_{\alpha},\textbf{#1+#2})}    % f(r,k+G)
+\def\bradiaf{u^{\alpha}_{q,\ell^{\prime}}(r_{\alpha},E_{\ell^{\prime}})}              %u(r_\alpha) did not contain the Energy
+\def\sphfr<#1><#2><#3> {{Y_{#1}^{#3}(\hat{\textbf{#2}}_{\alpha})}}                             %Y_{lm}(\hat{r})
+\def\sphfq<#1><#2><#3> {{Y_{#1}^{#3}(\hat{\textbf{#2}})}}                             %Y_{lm}(\hat{q})
+\def\gaucoe{C_{{\ell{m}},{\ell^{\prime}m^{\prime}},{\ell^{\prime\prime}m^{\prime\prime}}}}  %Gaunt coefficient
+\def\potvgir{V_{\textbf G^{\prime\prime} }}                                %V{G}
+\def\potvmt{V^{\alpha}_{{\ell}^{\prime\prime}{m}^{\prime\prime}} (r_{\alpha})}  %V{lm,r}     
+\def\fracatom<#1> {e^{i \textbf{#1} \textbf R^\alpha }}   % exp(iq\def\nablai2<#1> {{\nabla}_{\textit{#1}}^{2}}R)
+\def\bessf<#1>{j_{\ell}({#1}r_{\alpha})}     %j_l(kr)
+\def\dr{\mathrm{d}\textbf{r}}
+\def\chikp<#1><#2>{{\chi_{#1,#2}(\textbf{r})}}  
+\newcommand{\se}{Schrödinger equation}
+\def\hm{Hamiltonian }
+\def\cigs{CuIn_{1-\textit{x}}Ga_{x}Se_2}
+\def\czts{Cu_2ZnSnS_2}
+\def\cztse{Cu_2ZnSnSe_2}
+
+
+
+
+\pagenumbering{roman}
+\setcounter{page}{1}
+%\begin{titlepage}
+
+\begin{center}
+
+
+
+
+ \epsfig{file=kth_svv_indu_eng_manage.eps,width=4 cm}
+  \vspace{5 cm}
+
+
+
+
+
+  \vspace{12pt}
+  \textsc{\LARGE{\textbf{??????}}}
+  \vspace{12pt}
+
+
+  %\vspace{1 cm}
+  %\textsc{\LARGE{\textbf{}}}
+
+  \vspace{5 cm}
+
+  \textsc{\large{Rongzhen Chen}}
+
+  %\vspace{1 cm}
+
+  \vfill % Puts what's below at the bottom of the page
+
+  \ % Empty paragraph
+
+  \large{Licentiate Thesis}
+  \\
+  \large{School of Industrial Engineering and Management,
+  Department of Materials Science and Engineering,
+  KTH, Sweden, 2013}
+
+\end{center}
+
+ \thispagestyle{empty}
+
+%\end{titlepage}
+
+\newpage
+\setcounter{page}{2}
+\thispagestyle{empty}
+\
+\vfill
+
+\begin{flushright}
+ Materialvetenskap\\
+ KTH\\
+ISRN KTH/MSE--12/09--SE+AMFY/AVH
+ \hfill SE-100 44 Stockholm\\ ISBN 978-91-7501-313-8  \hfill
+Sweden\\
+\end{flushright}
+
+
+\vspace{5mm}
+
+Akademisk avhandling som med tillstånd av Kungliga Tekniska
+Högskolan framlägges till offentlig granskning för avläggande av
+licentiatexamen torsdagen den ???\linebreak 2013 kl ???? i
+konferensrummet, Materialvetenskap, Kungliga Tekniska
+Högskolan,\linebreak Brinellvägen 23, Stockholm.
+
+\vspace{5mm}
+
+\copyright \hspace{3pt} Rongzhen Chen, ???, 2013
+
+\vspace{5mm}
+
+Tryck: Universitetsservice US AB
+
+\newpage
+%\setcounter{page}{4}
+%\addcontentsline{toc}{section}{Abstract}
+
+\begin{abstract}
+
+\noindent In order to reduce the high dependence on fossil fuels and oil, solar energy is one of the alternatives.
+There are several very important absorber materials in the thin film photovlotaic technology, such as, the chalcopyrite $\cigs$ (CIGS), $\czts$ (CZTS) and $\cztse$ (CZTSe),
+the efficiency of CIGS has been reached up to around 20\%, so the accurate information for this kind of absorber materials is of great importance in order to
+design the photovlotaic (PV) materials. 
+
+\noindent In this licenciate, the parameterization of the band dispersion for the uppermost three valence bands (VBs) and the lowest conduction
+band (CB) in CIGS with $x=0, 0.5$, and $1$ is explored, which is based on the $k \cdot p$ method, but extended it up to high order. It demonstates that the VBs and CB
+are quite non-parabolic away from the $\Gamma$ point, which means that the effecive mass on $\Gamma$ point is not suitable to discribe the materials properties like 
+band filling and strong excitation effects. At last, the $\varepsilon$ spectra of $CuIn_{0.5}Ga_{0.5}Se_2$ is calculated, and compared with the
+experiment result from $CuIn_{0.7}Ga_{0.3}Se_2$ at 40 K, which demonstates that the overall shape of $\varepsilon$ spectra both of calculated and experimented 
+is in good agreement.
+
+\noindent The lowest CB and three uppermost VBs of CIGS is parameterized in order to better understand and discribe the anisotropy and non-parabolic of the energy dispersion.
+In order to illustrate the non-parabolic of the band dispersion, the effective electron and hole mass tensors are abtained in four symmetry directions, to futher illustrate
+the non-parabolic, the constant energy surface are calculated for the three topmost VBs as well as the lowest CB. Based on the non-parabolic parameterization and compared
+with parabolic band energy approximation, the density-of-states (DOS), Fermi energy and the carrier concentrations are calculated and analyzed. To summarize, one can better
+understand and analyze the electrical properties in the CIGS alloys.
+
+
+\noindent The $\varepsilon$ spectra of $CuIn_{0.5}Ga_{0.5}Se_2$ is determined by the full-potential linearized augmented plane wave calculations (FPLAPW), which shows a good 
+agreement with the result from Spectroscopic ellipsometry, which illustrates the result of $CuIn_{0.7}Ga_{0.3}Se_2$ at 40 K, furthermore, the probable electronic origins of 
+observed interband critical points (CP) is discussed, and the electronic origins of each CP are examined based on the results from the FPLAPW calculations. At 
+last, the band to band analysis of the contribution to the total ${\varepsilon_2}$ spectrum is explored.
+%\vfill \textbf{Keywords:}
+
+\end{abstract}
+
+%\begin{otherlanguage}{swedish}
+%
+%\begin{abstract} \addcontentsline{toc}{section}{Sammanfattning}
+
+%Det här är en sammanfattning på svenska.
+%
+%\end{abstract}
+
+%\end{otherlanguage}
+
+\newpage
+\setcounter{page}{5}
+
+\section*{Preface} \addcontentsline{toc}{chapter}{Preface}
+
+\subsection*{List of included publications:}
+
+\begin{enumerate}
+\renewcommand{\labelenumi}{\Roman{enumi}}
+\item{} \textbf{Dielectric function spectra at 40 K and critical-point energies for CuIn(0.7)Ga(0.3)Se2}
+\\ S.G. Choi, \textbf{R. Chen}, C. Persson, T.J. Kim, S.Y. Hwang, Y. D. Kim, and L. M. Mansfield,
+\textit{Appl. Phys. Lett. } {\textbf 101}, 261903 (2012).
+
+\item{}\textbf{Band-edge density-of-state and carrier concentrations in intrinsic and p-type CuIn(1-x)Ga(x)Se2}
+\\\textbf{R. Chen}, C. Persson, \textit{J. Appl. Phys.} {\textbf 112}, 103708 (2012).
+
+\item{} \textbf{Parameterization of CuIn(1-x)Ga(x)Se2 (x=0,0.5,1) energy bands }
+\\\textbf{R. Chen}, C. Persson, \textit{Thin Solid Films} {\textbf 519}, 7503 (2011).
+
+\end{enumerate}
+\subsection*{Comment on my own contribution}
+
+\textbf{Paper I:} half of the calculations, data analysis, literature survey;
+the manuscript was written jointly.\\
+\textbf{Paper II:} all calculations, data analysis; the manuscript was
+written jointly.\\
+\textbf{Paper \Rmnum{3}:} all calculations, data analysis, literature survey;
+writing the manuscript (90\%).\\
+\textbf{Paper \Rmnum{4}:} all calculations, data analysis, literature survey;
+writing the manuscript (90\%).\\
+
+\subsection*{Publications not included in the thesis:}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\Roman{enumi}}
+\setcounter{enumi}{4}
+
+\item{}\textbf{Electronic structure and optical properties from first-principles modeling}
+\\C. Persson, \textbf{R. Chen}, H. Zhao, M. Kumar, and D. Huang, {\textit John Wiley $\&$ Sons}, {Book chapter in Copper zinc tin sulphide-based thin film solar sells, ed by K. Ito} (submitted 2013).
+
+
+\end{enumerate}
+
+\newpage
+\setcounter{page}{7}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+%\addcontentsline{toc}{chapter}{Contents}
+\tableofcontents
+% Always compile twice if you have changed much
+
+
+%\thispagestyle{empty}
+
+%\newpage
+%\mbox{}
+%\thispagestyle{empty}
+
+
+
+
+%\part{Theoretical background}
+\newpage
+\pagenumbering{arabic}
+\chapter{Introduction}%\addcontentsline{toc}{chapter}{Introduction}
+
+\begin{comment}
+$\wf$
+$\hath$
+$\wf $
+$\wfbo$
+$\wfh$
+$\wfhit<r>$
+$\bwf<r><r>$
+$\bwfn<r><r>$
+$\wfbloch<r><r>$
+$\ubloch<r><r>$
+$\ebloch<r><r>$
+$\bwfc<r><r><r>  $
+$\sumi<r> $
+$\sumij<r><r> $
+$\suminj<r><r> $
+$\coefkhe$
+
+$\coefkhn$
+\end{comment}
+
+$\nablaiabc<r>$
+
+$\moperater$
+
+$\sumg<r>$
+
+$\sumlm<r><r>$
+
+$\coeff<r><r><r>$
+
+$\expkg<r><r>$
+
+$\expg<r>$
+
+$\chig<r>$
+
+$\kplusg<r><r>$
+
+
+
+
+
+$\radiaf<r><r>$
+
+$\radiafc<r><r><r>$
+
+$\bradiaf$
+
+
+$\sphfr<r><r><r> $
+
+$\sphfq<r><r><r> $
+
+$\gaucoe$
+
+$\potvgir$
+
+$\potvmt$
+
+
+
+$ \fracatom<r> $
+
+
+
+$\bessf<r>$
+$\dr$
+$\chikp<r><r>$
+$\hm$
+$\cigs$
+$\czts$
+$\cztse$
+
+
+
+\end{document}
